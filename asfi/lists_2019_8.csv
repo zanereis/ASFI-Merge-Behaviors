@@ -1,0 +1,1953 @@
+listid,listname,pj_alias,status,start_date,end_date,dev_is_available,commit_is_available,is_in_attic,sponsor,intro,istoplv,start_from_scratch,pj_url,pj_github_url
+1,Amaterasu,amaterasu,0,9/7/2017,,t,t,f,"Incubator
+		
+		(Jean-Baptiste Onofré)
+		 
+	   ",Apache Amaterasu is a framework providing continuous deployment for Big Data pipelines.,,,http://incubator.apache.org/projects/amaterasu.html,https://github.com/apache/incubator-Amaterasu
+2,Annotator,annotator,0,8/30/2016,,t,t,f,"Incubator
+		
+		(Daniel Gruno)
+		 
+	   ","Annotator provides annotation enabling code for browsers, servers, and humans.",,,http://incubator.apache.org/projects/annotator.html,https://github.com/apache/incubator-Annotator
+3,BatchEE,batchee,0,10/3/2013,,t,t,f,"Incubator
+		
+		(FIXME)
+		 
+	   ","
+            BatchEE projects aims to provide a JBatch implementation (aka JSR352)
+            and a set of useful extensions for this specification.
+        ",,,http://incubator.apache.org/projects/batchee.html,https://github.com/apache/incubator-BatchEE
+4,BRPC,brpc,0,11/13/2018,,t,f,f,"Incubator
+		 
+	   ",brpc is an industrial-grade RPC framework for building reliable and high-performance services.,,,http://incubator.apache.org/projects/brpc.html,https://github.com/apache/incubator-BRPC
+5,Crail,crail,0,11/1/2017,,t,t,f,"Incubator
+		
+		(Luciano Resende)
+		 
+	   ",Crail is a storage platform for sharing performance critical data in distributed data processing jobs at very high speed.,,,http://incubator.apache.org/projects/crail.html,https://github.com/apache/incubator-Crail
+6,Daffodil,daffodil,0,8/27/2017,,t,t,f,"Incubator
+		
+		(John D. Ament)
+		 
+	   ",Apache Daffodil is an implementation of the Data Format Description Language (DFDL) used to convert between fixed format data and XML/JSON.,,,http://incubator.apache.org/projects/daffodil.html,https://github.com/apache/incubator-Daffodil
+7,DataSketches,datasketches,0,3/30/2019,,t,t,f,"Incubator
+		
+		(Jean-Baptiste Onofré)
+		 
+	   ","DataSketches is an open source, high-performance library of stochastic streaming algorithms commonly called ""sketches"" in the data sciences. Sketches are small, stateful programs that process massive data as a stream and can provide approximate answers, with mathematical guarantees, to computationally difficult queries orders-of-magnitude faster than traditional, exact methods.",,,http://incubator.apache.org/projects/datasketches.html,https://github.com/apache/incubator-DataSketches
+8,DLab,dlab,0,8/20/2018,,t,t,f,"Incubator
+		
+		(P. Taylor Goetz)
+		 
+	   ","DLab is a platform for creating self-service, exploratory data science environments in the cloud using best-of-breed data science tools.",,,http://incubator.apache.org/projects/dlab.html,https://github.com/apache/incubator-DLab
+9,DolphinScheduler,dolphinscheduler,0,8/29/2019,,f,f,f,"Incubator
+		
+		(Sheng Wu)
+		 
+	   ",olphinScheduler is a distributed ETL scheduling engine with powerful DAG visualization interface..,,,http://incubator.apache.org/projects/dolphinscheduler.html,https://github.com/apache/incubator-DolphinScheduler
+10,Doris,doris,0,7/18/2018,,t,t,f,"Incubator
+		
+		(Dave Fisher)
+		 
+	   ",Doris is a MPP-based interactive SQL data warehousing for reporting and analysis.,,,http://incubator.apache.org/projects/doris.html,https://github.com/apache/incubator-Doris
+11,Druid,druid,0,2/28/2018,,t,t,f,"Incubator
+		
+		(Julian Hyde)
+		 
+	   ","Druid is a high-performance, column-oriented, distributed data store.",,,http://incubator.apache.org/projects/druid.html,https://github.com/apache/incubator-Druid
+12,ECharts,echarts,0,1/18/2018,,t,t,f,"Incubator
+		
+		(Kevin A. McGrail)
+		 
+	   ",ECharts is a charting and data visualization library written in JavaScript.,,,http://incubator.apache.org/projects/echarts.html,https://github.com/apache/incubator-ECharts
+13,Edgent,edgent,0,2/29/2016,,t,t,f,"Incubator
+		
+		(Katherine Marsden)
+		 
+	   ",Edgent is a stream processing programming model and lightweight runtime to execute analytics at devices on the edge or at the gateway. (Formerly known as Quarks),,,http://incubator.apache.org/projects/edgent.html,https://github.com/apache/incubator-Edgent
+14,Flagon,flagon,0,7/13/2016,,t,t,f,"Incubator
+		
+		(Lewis John McGibbney)
+		 
+	   ",Flagon is a software tool usability testing platform,,,http://incubator.apache.org/projects/flagon.html,https://github.com/apache/incubator-Flagon
+15,Gobblin,gobblin,0,2/23/2017,,t,t,f,"Incubator
+		
+		(Olivier Lamy)
+		 
+	   ","Gobblin is a distributed data integration framework that simplifies common aspects of big data integration such as data ingestion, replication, organization and lifecycle management for both streaming and batch data ecosystems.",,,http://incubator.apache.org/projects/gobblin.html,https://github.com/apache/incubator-Gobblin
+16,Heron,heron,0,6/23/2017,,t,t,f,"Incubator
+		
+		(Julien Le Dem)
+		 
+	   ","A real-time, distributed, fault-tolerant stream processing engine.",,,http://incubator.apache.org/projects/heron.html,https://github.com/apache/incubator-Heron
+17,Hivemall,hivemall,0,9/13/2016,,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ",Hivemall is a library for machine learning implemented as Hive UDFs/UDAFs/UDTFs.,,,http://incubator.apache.org/projects/hivemall.html,https://github.com/apache/incubator-Hivemall
+18,Hudi,hudi,0,1/17/2019,,t,t,f,"incubator
+		
+		(Julien Le Dem)
+		 
+	   ",Hudi provides atomic upserts and incremental data streams on Big Data,,,http://incubator.apache.org/projects/hudi.html,https://github.com/apache/incubator-Hudi
+19,Iceberg,iceberg,0,11/16/2018,,t,t,f,"Incubator
+		
+		(Owen O'Malley)
+		 
+	   ","Iceberg is a table format for large, slow-moving tabular data.",,,http://incubator.apache.org/projects/iceberg.html,https://github.com/apache/incubator-Iceberg
+20,IoTDB,iotdb,0,11/18/2018,,t,t,f,"Incubator
+		 
+	   ",IoTDB is a data store for managing large amounts of time series data such as timestamped data from IoT sensors in industrial applications.,,,http://incubator.apache.org/projects/iotdb.html,https://github.com/apache/incubator-IoTDB
+21,Livy,livy,0,6/5/2017,,t,t,f,"Incubator
+		
+		(Sean Busbey)
+		 
+	   ","Livy is web service that exposes a REST interface for managing long running Apache Spark contexts in your cluster. With Livy, new applications can be built on top of Apache Spark that require fine grained interaction with many Spark contexts.",,,http://incubator.apache.org/projects/livy.html,https://github.com/apache/incubator-Livy
+22,Marvin-AI,marvin,0,8/21/2018,,t,t,f,"Incubator
+		
+		(Luciano Resende)
+		 
+	   ","Marvin-AI is an open-source artificial intelligence (AI) platform that helps data scientists, prototype and productionalize complex solutions with a scalable, low-latency, language-agnostic, and standardized architecture while simplifies the process of exploration and modeling.",,,http://incubator.apache.org/projects/marvin.html,https://github.com/apache/incubator-Marvin-AI
+23,Milagro,milagro,0,12/21/2015,,t,t,f,"Incubator
+		
+		(Nick Kew)
+		 
+	   ",Milagro is core security infrastructure and crypto libraries for decentralized networks and distributed systems.,,,http://incubator.apache.org/projects/milagro.html,https://github.com/apache/incubator-Milagro
+24,MXNet,mxnet,0,1/23/2017,,t,t,f,"Incubator
+		
+		(Henri Yandell)
+		 
+	   ",A Flexible and Efficient Library for Deep Learning,,,http://incubator.apache.org/projects/mxnet.html,https://github.com/apache/incubator-MXNet
+25,Myriad,myriad,0,3/1/2015,,t,t,f,"Incubator
+		
+		(Benjamin Hindman)
+		 
+	   ",Myriad enables co-existence of Apache Hadoop YARN and Apache Mesos together on the same cluster and allows dynamic resource allocations across both Hadoop and other applications running on the same physical data center infrastructure.,,,http://incubator.apache.org/projects/myriad.html,https://github.com/apache/incubator-Myriad
+26,Nemo,nemo,0,2/4/2018,,t,t,f,"Incubator
+		
+		(Byung-Gon Chun)
+		 
+	   ",Nemo is a data processing system to flexibly control the runtime behaviors of a job to adapt to varying deployment characteristics.,,,http://incubator.apache.org/projects/nemo.html,https://github.com/apache/incubator-Nemo
+27,Omid,omid,0,3/28/2016,,t,t,f,"Incubator
+		
+		(Daniel Dai)
+		 
+	   ","Omid is a flexible, reliable, high performant and scalable ACID transactional framework that allows client applications to execute transactions on top of MVCC key/value-based NoSQL datastores (currently Apache HBase) providing Snapshot Isolation guarantees on the accessed data.",,,http://incubator.apache.org/projects/omid.html,https://github.com/apache/incubator-Omid
+28,PageSpeed,pagespeed,0,9/30/2017,,t,t,f,"Incubator
+		
+		(Leif Hedstrom)
+		 
+	   ","
+            PageSpeed represents a series of open source technologies to help make the
+            web faster by rewriting web pages to reduce latency and bandwidth.
+        ",,,http://incubator.apache.org/projects/pagespeed.html,https://github.com/apache/incubator-PageSpeed
+29,Pinot,pinot,0,10/17/2018,,t,t,f,"Incubator
+		
+		(Olivier Lamy)
+		 
+	   ",Pinot is a distributed columnar storage engine that can ingest data in real-time and serve analytical queries at low latency.,,,http://incubator.apache.org/projects/pinot.html,https://github.com/apache/incubator-Pinot
+30,Pony Mail,ponymail,0,5/27/2016,,t,t,f,"Incubator
+		
+		(Suneel Marthi)
+		 
+	   ","Pony Mail is a mail-archiving, archive viewing, and interaction service, that can be integrated with many email platforms.",,,http://incubator.apache.org/projects/ponymail.html,https://github.com/apache/incubator-Pony Mail
+31,Ratis,ratis,0,1/3/2017,,t,t,f,"Incubator
+		
+		(Jitendra Pandey)
+		 
+	   ",Ratis is a java implementation for RAFT consensus protocol,,,http://incubator.apache.org/projects/ratis.html,https://github.com/apache/incubator-Ratis
+32,Rya,rya,0,9/18/2015,,t,t,f,"Incubator
+		
+		(Adam Fuchs)
+		 
+	   ","Rya (pronounced ""ree-uh"" /rēə/) is a cloud-based RDF triple store that supports SPARQL queries. Rya is a scalable RDF data management system built on top of Accumulo. Rya uses novel storage methods, indexing schemes, and query processing techniques that scale to billions of triples across multiple nodes. Rya provides fast and easy access to the data through SPARQL, a conventional query mechanism for RDF data.",,,http://incubator.apache.org/projects/rya.html,https://github.com/apache/incubator-Rya
+33,S2Graph,s2graph,0,11/29/2015,,t,t,f,"Incubator
+		
+		(Hyunsik Choi)
+		 
+	   ",S2Graph is a distributed and scalable OLTP graph database built on Apache HBase to support fast traversal of extremely large graphs.,,,http://incubator.apache.org/projects/s2graph.html,https://github.com/apache/incubator-S2Graph
+34,SAMOA,samoa,0,12/15/2014,,t,t,f,"Incubator
+		
+		(Daniel Dai)
+		 
+	   ","SAMOA provides a collection of distributed streaming algorithms for the most common data mining and machine learning tasks such as classification, clustering, and regression, as well as programming abstractions to develop new algorithms that run on top of distributed stream processing engines (DSPEs). It features a pluggable architecture that allows it to run on several DSPEs such as Apache Storm, Apache S4, and Apache Samza.",,,http://incubator.apache.org/projects/samoa.html,https://github.com/apache/incubator-SAMOA
+35,SDAP,sdap,0,10/22/2017,,t,t,f,"Incubator
+		
+		(Lewis John McGibbney)
+		 
+	   ",SDAP is an integrated data analytic center for Big Science problems.,,,http://incubator.apache.org/projects/sdap.html,https://github.com/apache/incubator-SDAP
+36,ShardingSphere,shardingsphere,0,11/10/2018,,t,f,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","Sharding-Sphere is an ecosystem of transparent distributed database middleware, focusing on data sharding, distributed transaction and database orchestration.",,,http://incubator.apache.org/projects/shardingsphere.html,https://github.com/apache/incubator-ShardingSphere
+37,SINGA,singa,0,3/17/2015,,t,t,f,"Incubator
+		
+		(Thejas Nair)
+		 
+	   ",SINGA is a distributed deep learning platform.,,,http://incubator.apache.org/projects/singa.html,https://github.com/apache/incubator-SINGA
+38,Spot,spot,0,9/23/2016,,t,t,f,"Incubator
+		
+		(Doug Cutting)
+		 
+	   ",Apache Spot is a platform for network telemetry built on an open data model and Apache Hadoop.,,,http://incubator.apache.org/projects/spot.html,https://github.com/apache/incubator-Spot
+39,Superset,superset,0,5/21/2017,,t,t,f,"Incubator
+		
+		(Daniel Dai)
+		 
+	   ","Superset is an enterprise-ready web application for data exploration, data visualization and dashboarding.",,,http://incubator.apache.org/projects/superset.html,https://github.com/apache/incubator-Superset
+40,Tamaya,tamaya,0,11/14/2014,,t,t,f,"Incubator
+		
+		(David Blevins)
+		 
+	   ","Tamaya is a highly flexible configuration solution based on an modular, extensible and injectable key/value based design, which should provide a minimal but extendible modern and functional API leveraging SE, ME and EE environments.",,,http://incubator.apache.org/projects/tamaya.html,https://github.com/apache/incubator-Tamaya
+41,Taverna,taverna,0,10/20/2014,,t,t,f,"Incubator
+		
+		(Andy Seaborne)
+		 
+	   ",Taverna is a domain-independent suite of tools used to design and execute data-driven workflows.,,,http://incubator.apache.org/projects/taverna.html,https://github.com/apache/incubator-Taverna
+42,Tephra,tephra,0,3/7/2016,,t,t,f,"Incubator
+		
+		(James Taylor)
+		 
+	   ","
+            Tephra is a system for providing globally consistent transactions on
+            top of Apache HBase and other storage engines.
+        ",,,http://incubator.apache.org/projects/tephra.html,https://github.com/apache/incubator-Tephra
+43,Toree,toree,0,12/2/2015,,t,t,f,"Incubator
+		
+		(Sam Ruby)
+		 
+	   ",Toree provides applications with a mechanism to interactively and remotely access Apache Spark.,,,http://incubator.apache.org/projects/toree.html,https://github.com/apache/incubator-Toree
+44,Training,training,0,2/21/2019,,t,t,f,"Incubator
+		
+		(Lars Francke)
+		 
+	   ","The Training project aims to develop resources which can be used for training purposes in various media formats, languages and for various Apache and non-Apache target projects.",,,http://incubator.apache.org/projects/training.html,https://github.com/apache/incubator-Training
+45,Tuweni,tuweni,0,3/25/2019,,t,t,f,"Incubator
+		
+		(Jim Jagielski)
+		 
+	   ",Tuweni is a set of libraries and other tools to aid development of blockchain and other decentralized software in Java and other JVM languages.,,,http://incubator.apache.org/projects/tuweni.html,https://github.com/apache/incubator-Tuweni
+69,Bloodhound,bloodhound,1,12/23/2011,3/20/2013,t,t,f,"Incubator
+		 
+	   ","Bloodhound is a software development collaboration tool, including issue tracking, wiki and repository browsing.
+		 
+	   ",,,http://incubator.apache.org/projects/bloodhound.html,https://github.com/apache/Bloodhound
+46,TVM,tvm,0,3/6/2019,,t,f,f,"Incubator
+		
+		(Markus Weimer)
+		 
+	   ","TVM is a full stack open deep learning compiler stack for CPUs, GPUs, and specialized accelerators. It aims to close the gap between the productivity-focused deep learning frameworks, and the performance- or efficiency-oriented hardware backends. ",,,http://incubator.apache.org/projects/tvm.html,https://github.com/apache/incubator-TVM
+47,Warble,warble,0,6/11/2018,,t,t,f,"Incubator
+		
+		(Daniel Gruno)
+		 
+	   ",a distributed endpoint monitoring solution where the agent is hosted on your own hardware.,,,http://incubator.apache.org/projects/warble.html,https://github.com/apache/incubator-Warble
+48,Weex,weex,0,11/30/2016,,t,t,f,"Incubator
+		
+		(Edward J. Yoon)
+		 
+	   ",Weex is a framework for building Mobile cross-platform high performance UI.,,,http://incubator.apache.org/projects/weex.html,https://github.com/apache/incubator-Weex
+49,Abdera,abdera,1,6/6/2006,11/8/2008,t,t,t,"Incubator
+		 
+	   ","An implementation of the Atom Syndication Format and Atom Publishing Protocol.
+		 
+	   ",,,http://incubator.apache.org/projects/abdera.html,https://github.com/apache/Abdera
+50,Accumulo,accumulo,1,9/12/2011,3/21/2012,t,t,f,"Incubator
+		 
+	   ","Accumulo is a distributed key/value store that provides expressive, cell-level access labels.
+		 
+	   ",,,http://incubator.apache.org/projects/accumulo.html,https://github.com/apache/Accumulo
+51,ACE,ace,1,4/24/2009,12/21/2011,t,t,t,"Board
+		 
+	   ","A software distribution framework based on OSGi that allows you to manage and distribute artifacts.
+		 
+	   ",,,http://incubator.apache.org/projects/ace.html,https://github.com/apache/ACE
+52,ActiveMQ,activemq,1,12/1/2005,2/6/2007,t,t,f,"Geronimo
+		 
+	   ","A robust and high performance Message Orientated Middleware provider which will be integrated into Apache Geronimo but also be usable from inside any JVM.
+		 
+	   ",,,http://incubator.apache.org/projects/activemq.html,https://github.com/apache/ActiveMQ
+53,Airavata,airavata,1,5/5/2011,9/19/2012,t,t,f,"Board
+		
+		(Ross Gardler)
+		 
+	   ","A software suite to compose, manage, execute, and monitor large scale applications and workflows on computational resources ranging from local clusters to national grids and computing clouds.
+		 
+	   ",,,http://incubator.apache.org/projects/airavata.html,https://github.com/apache/Airavata
+54,Airflow,airflow,1,3/31/2016,12/19/2018,t,t,f,"Incubator
+		
+		(Chris Riccomini)
+		 
+	   ","Airflow is a workflow automation and scheduling system that can be used to author and manage data pipelines.
+		 
+	   ",,,http://incubator.apache.org/projects/airflow.html,https://github.com/apache/Airflow
+55,Allura,allura,1,6/25/2012,3/19/2014,t,t,f,"Incubator
+		
+		(Rich Bowen)
+		 
+	   ","Forge software for the development of software projects, including source control systems, issue tracking, discussion, wiki, and other software project management tools.
+		 
+	   ",,,http://incubator.apache.org/projects/allura.html,https://github.com/apache/Allura
+56,Ambari,ambari,1,8/30/2011,11/20/2013,t,t,f,"Incubator
+		 
+	   ","Ambari is a monitoring, administration and lifecycle management project for Apache Hadoop clusters. (Formerly known as HMS)
+		 
+	   ",,,http://incubator.apache.org/projects/ambari.html,https://github.com/apache/Ambari
+57,Amber,oltu,1,5/9/2010,1/16/2013,t,t,t,"Shindig
+		 
+	   ","
+            The Amber project will deliver a Java development framework mainly aimed to build OAuth-aware applications.
+            Amber graduated with the name Apache Oltu
+        
+		 
+	   ",,,http://incubator.apache.org/projects/amber.html,https://github.com/apache/Amber
+58,Any23,any23,1,10/1/2011,8/28/2012,t,t,f,"Tika
+		 
+	   ","Anything To Triples (any23) is a library, a web service and a command line tool that extracts structured data in RDF format from a variety of Web documents.
+		 
+	   ",,,http://incubator.apache.org/projects/any23.html,https://github.com/apache/Any23
+59,Apex,apex,1,8/17/2015,4/20/2016,t,t,f,"Incubator
+		
+		(Ted Dunning)
+		 
+	   ","Apex is an enterprise grade native YARN big data-in-motion platform that unifies stream processing as well as batch processing.
+		 
+	   ",,,http://incubator.apache.org/projects/apex.html,https://github.com/apache/Apex
+60,Apollo,apollo,1,11/8/2004,6/3/2005,f,f,f,"Web Services
+		 
+	   ","A robust implementation of the OASIS WS-ResourceFramework (WSRF) family of specifications
+		 
+	   ",,,http://incubator.apache.org/projects/apollo.html,https://github.com/apache/Apollo
+61,Aries,aries,1,9/22/2009,12/15/2010,t,t,f,"Incubator
+		 
+	   ","The Aries project will deliver a set of pluggable Java components enabling an enterprise OSGi application programming model.
+		 
+	   ",,,http://incubator.apache.org/projects/aries.html,https://github.com/apache/Aries
+62,AsterixDB,asterixdb,1,2/28/2015,4/20/2016,t,t,f,"Incubator
+		
+		(Chris Mattmann)
+		 
+	   ","Apache AsterixDB is a scalable big data management system (BDMS) that provides storage, management, and query capabilities for large collections of semi-structured data.
+		 
+	   ",,,http://incubator.apache.org/projects/asterixdb.html,https://github.com/apache/AsterixDB
+63,Atlas,atlas,1,5/5/2015,6/21/2017,t,t,f,"Incubator
+		
+		(Jitendra Nath Pandey)
+		 
+	   ","Apache Atlas is a scalable and extensible set of core foundational governance services that enables enterprises to effectively and efficiently meet their compliance requirements within Hadoop and allows integration with the complete enterprise data ecosystem
+		 
+	   ",,,http://incubator.apache.org/projects/atlas.html,https://github.com/apache/Atlas
+64,Aurora,aurora,1,10/1/2013,3/18/2015,t,t,f,"Incubator
+		
+		(Benjamin Hindman)
+		 
+	   ","Aurora is a service scheduler used to schedule jobs onto Apache Mesos.
+		 
+	   ",,,http://incubator.apache.org/projects/aurora.html,https://github.com/apache/Aurora
+65,Beam,beam,1,2/1/2016,12/21/2016,t,t,f,"Incubator
+		
+		(Jean-Baptiste Onofre)
+		 
+	   ","Apache Beam is an open source, unified model and set of language-specific SDKs for defining and executing data processing workflows, and also data ingestion and integration flows, supporting Enterprise Integration Patterns (EIPs) and Domain Specific Languages (DSLs). Dataflow pipelines simplify the mechanics of large-scale batch and streaming data processing and can run on a number of runtimes like Apache Flink, Apache Spark, and Google Cloud Dataflow (a cloud service). Beam also brings DSL in different languages, allowing users to easily implement their data integration processes.
+		 
+	   ",,,http://incubator.apache.org/projects/beam.html,https://github.com/apache/Beam
+66,Bean Validation,bval,1,3/1/2010,2/15/2012,t,t,f,"Incubator
+		 
+	   ","The Bean Validation project will create an implementation of Bean Validation as defined by the Java EE specifications.
+		
+		
+		Graduated as Apache BVal
+		 
+	   ",,,http://incubator.apache.org/projects/beanvalidation.html,https://github.com/apache/Bean Validation
+67,Beehive,beehive,1,5/21/2004,7/18/2005,t,t,t,"Incubator
+		 
+	   ","Extensible Java application framework with an integrated metadata-driven programming model for web services, web applications, and resource access
+		 
+	   ",,,http://incubator.apache.org/projects/beehive.html,https://github.com/apache/Beehive
+68,Bigtop,bigtop,1,6/20/2011,9/19/2012,t,t,f,"Incubator
+		 
+	   ","Bigtop is a project for the development of packaging and tests of the Hadoop ecosystem.
+		 
+	   ",,,http://incubator.apache.org/projects/bigtop.html,https://github.com/apache/Bigtop
+70,Brooklyn,brooklyn,1,5/1/2014,11/18/2015,t,t,f,"Incubator
+		
+		(Chip Childers)
+		 
+	   ","
+            Brooklyn is a framework for modelling, monitoring, and managing applications
+            through autonomic blueprints.
+        
+		 
+	   ",,,http://incubator.apache.org/projects/brooklyn.html,https://github.com/apache/Brooklyn
+71,Buildr,buildr,1,11/1/2007,2/23/2009,t,t,f,"Incubator
+		 
+	   ","Buildr is a simple and intuitive build system for Java projects written in Ruby.
+		 
+	   ",,,http://incubator.apache.org/projects/buildr.html,https://github.com/apache/Buildr
+72,Calcite,calcite,1,5/19/2014,10/22/2015,t,t,f,"Incubator
+		
+		(Ashutosh Chauhan)
+		 
+	   ","Calcite is a highly customizable engine for parsing and planning queries on data in a wide variety of formats. It allows database-like access, and in particular a SQL interface and advanced query optimization, for data not residing in a traditional database. (Renamed from Optiq on 2014-09-30.)
+		 
+	   ",,,http://incubator.apache.org/projects/calcite.html,https://github.com/apache/Calcite
+73,CarbonData,carbondata,1,6/2/2016,4/19/2017,t,t,f,"Incubator
+		
+		(Jean-Baptiste Onofre)
+		 
+	   ","Apache CarbonData is a new Apache Hadoop native file format for faster interactive query using advanced columnar storage, index, compression and encoding techniques to improve computing efficiency, in turn it will help speedup queries an order of magnitude faster over PetaBytes of data.
+		 
+	   ",,,http://incubator.apache.org/projects/carbondata.html,https://github.com/apache/CarbonData
+74,Cassandra,cassandra,1,1/1/2009,2/17/2010,t,t,f,"Incubator
+		 
+	   ","Cassandra
+		 
+	   ",,,http://incubator.apache.org/projects/cassandra.html,https://github.com/apache/Cassandra
+75,Cayenne,cayenne,1,3/9/2006,12/20/2006,t,t,f,"DB
+		 
+	   ","Robust Persistence
+		 
+	   ",,,http://incubator.apache.org/projects/cayenne.html,https://github.com/apache/Cayenne
+76,Celix,celix,1,11/2/2010,7/16/2014,t,t,f,"Incubator
+		 
+	   ","Celix is an OSGi like implementation in C with a distinct focus on interoperability between Java and C.
+		 
+	   ",,,http://incubator.apache.org/projects/celix.html,https://github.com/apache/Celix
+77,Chemistry,chemistry,1,4/30/2009,2/16/2010,t,t,f,"Incubator
+		 
+	   ","Chemistry
+		 
+	   ",,,http://incubator.apache.org/projects/chemistry.html,https://github.com/apache/Chemistry
+78,Chukwa,chukwa,1,7/14/2010,9/27/2013,t,t,f,"Incubator
+		 
+	   ","Chukwa is a log collection and analysis framework for Apache Hadoop clusters.
+		 
+	   ",,,http://incubator.apache.org/projects/chukwa.html,https://github.com/apache/Chukwa
+79,Clerezza,clerezza,1,11/27/2009,2/20/2013,t,t,f,"Incubator
+		
+		(Bertrand Delacrétaz)
+		 
+	   ","an OSGi-based modular application and set of components (bundles) for building RESTFul Semantic Web applications and services.
+		 
+	   ",,,http://incubator.apache.org/projects/clerezza.html,https://github.com/apache/Clerezza
+80,Click,click,1,7/21/2008,11/18/2009,t,t,t,"Incubator
+		 
+	   ","Component based Java Web Framework
+		 
+	   ",,,http://incubator.apache.org/projects/click.html,https://github.com/apache/Click
+81,CloudStack,cloudstack,1,4/16/2012,3/20/2013,t,t,f,"Incubator
+		
+		(Jim Jagielski)
+		 
+	   ","CloudStack is an IaaS (“Infrastracture as a Service�? cloud orchestration platform.
+		 
+	   ",,,http://incubator.apache.org/projects/cloudstack.html,https://github.com/apache/CloudStack
+82,CommonsRDF,commonsrdf,1,3/6/2015,11/28/2016,t,t,f,"Incubator
+		
+		(Lewis John McGibbney)
+		 
+	   ","Commons RDF is a set of interfaces and classes for RDF 1.1 concepts and behaviours.  The commons-rdf-api module defines interfaces and testing harness.  The commons-rdf-simple module provides a basic reference implementation to exercise the test harness and clarify API contracts.
+		 
+	   ",,,http://incubator.apache.org/projects/commonsrdf.html,https://github.com/apache/CommonsRDF
+83,Cordova,cordova,1,10/15/2011,10/17/2012,t,t,f,"Incubator
+		 
+	   ","Apache Cordova is a platform for building native mobile applications using HTML, CSS and JavaScript (formerly Phonegap). The project entered incubation as Callback, but decided to change its name to Cordova on 2011-11-28.
+		 
+	   ",,,http://incubator.apache.org/projects/cordova.html,https://github.com/apache/Cordova
+84,CouchDB,couchdb,1,2/12/2008,11/19/2008,t,t,f,"Incubator
+		 
+	   ","CouchDB
+		 
+	   ",,,http://incubator.apache.org/projects/couchdb.html,https://github.com/apache/CouchDB
+85,Crunch,crunch,1,5/26/2012,2/20/2013,t,t,f,"Incubator
+		
+		(Patrick Hunt)
+		 
+	   ","Crunch is a Java library for writing, testing, and running pipelines of MapReduce jobs on Apache Hadoop.
+		 
+	   ",,,http://incubator.apache.org/projects/crunch.html,https://github.com/apache/Crunch
+86,cTAKES,ctakes,1,6/11/2012,3/20/2013,t,t,f,"Incubator
+		
+		(Jörn Kottmann)
+		 
+	   ","cTAKES (clinical Text Analysis and Knowledge Extraction System) is an natural language processing tool for information extraction from electronic medical record clinical free-text.
+		 
+	   ",,,http://incubator.apache.org/projects/ctakes.html,https://github.com/apache/cTAKES
+87,Curator,curator,1,3/11/2013,9/1/2013,t,t,f,"Incubator
+		
+		(Patrick Hunt)
+		 
+	   ","Curator - ZooKeeper client wrapper and rich ZooKeeper framework
+		 
+	   ",,,http://incubator.apache.org/projects/curator.html,https://github.com/apache/Curator
+88,CXF,cxf,1,8/15/2006,4/16/2008,t,t,f,"Incubator
+		 
+	   ","The CXF project will create a SOA services framework by merges the ObjectWeb Celtix project and the Codehaus XFire project.
+		 
+	   ",,,http://incubator.apache.org/projects/cxf.html,https://github.com/apache/CXF
+89,DataFu,datafu,1,1/5/2014,2/21/2018,t,t,f,"Incubator
+		
+		(Jakob Homan)
+		 
+	   ","DataFu provides a collection of Hadoop MapReduce jobs and functions in higher level languages based on it to perform data analysis. It provides functions for common statistics tasks (e.g. quantiles, sampling), PageRank, stream sessionization, and set and bag operations. DataFu also provides Hadoop jobs for incremental data processing in MapReduce.
+		 
+	   ",,,http://incubator.apache.org/projects/datafu.html,https://github.com/apache/DataFu
+90,Deltacloud,deltacloud,1,5/19/2010,10/26/2011,t,t,t,"Incubator
+		 
+	   ","Deltacloud, cloud API (REST) and abstraction framework
+		 
+	   ",,,http://incubator.apache.org/projects/deltacloud.html,https://github.com/apache/Deltacloud
+91,DeltaSpike,deltaspike,1,12/7/2011,5/28/2013,t,t,f,"Incubator
+		 
+	   ","DeltaSpike is a collection of JSR-299 (CDI) Extensions for building applications on the Java SE and EE platforms.
+		 
+	   ",,,http://incubator.apache.org/projects/deltaspike.html,https://github.com/apache/DeltaSpike
+92,Derby,derby,1,8/15/2004,7/18/2005,t,t,f,"DB
+		 
+	   ","Java relational database
+		 
+	   ",,,http://incubator.apache.org/projects/derby.html,https://github.com/apache/Derby
+93,DeviceMap,devicemap,1,1/3/2012,11/19/2014,t,t,t,"Incubator
+		
+		(Bertrand Delacretaz)
+		 
+	   ","Apache DeviceMap is a data repository containing device information, images and other relevant information for all sorts of mobile devices, e.g. smartphones and tablets. While the focus is initially on that data, APIs will also be created to use and manage it.
+		 
+	   ",,,http://incubator.apache.org/projects/devicemap.html,https://github.com/apache/DeviceMap
+94,DirectMemory,directmemory,1,10/5/2011,8/15/2012,t,t,t,"Incubator
+		 
+	   ","DirectMemory's main purpose is to to act as a second level cache able to store large amounts of data without filling up the Java heap and thus avoiding long garbage collection cycles.
+		 
+	   ",,,http://incubator.apache.org/projects/directmemory.html,https://github.com/apache/DirectMemory
+95,Directory,directory,1,10/23/2003,2/23/2005,t,t,f,"Incubator
+		 
+	   ","Directory projects.
+		 
+	   ",,,http://incubator.apache.org/projects/directory.html,https://github.com/apache/Directory
+96,DistributedLog,distributedlog,1,6/24/2016,7/1/2017,t,t,f,"Incubator
+		
+		(Flavio Junqueira)
+		 
+	   ","DistributedLog is a high-performance replicated log service. It offers durability, replication and strong consistency, which provides a fundamental building block for building reliable distributed systems.
+		 
+	   ",,,http://incubator.apache.org/projects/distributedlog.html,https://github.com/apache/DistributedLog
+97,Drill,drill,1,8/11/2012,11/19/2014,t,t,f,"Incubator
+		
+		(Ted Dunning)
+		 
+	   ","Drill is a distributed system for interactive analysis of large-scale datasets, inspired by Google's Dremel.
+		 
+	   ",,,http://incubator.apache.org/projects/drill.html,https://github.com/apache/Drill
+98,Dubbo,dubbo,1,2/16/2018,5/15/2019,t,t,f,"Incubator
+		
+		(Justin Mclean)
+		 
+	   ","Dubbo is a high-performance, lightweight, java based RPC framework.
+		 
+	   ",,,http://incubator.apache.org/projects/dubbo.html,https://github.com/apache/Dubbo
+99,Eagle,eagle,1,10/26/2015,12/21/2016,t,t,f,"Incubator
+		
+		(Henry Saputra)
+		 
+	   ","Apache Eagle is an open source analytics solution for identifying security and performance issues instantly on big data platforms, e.g. Apache Hadoop, Apache Spark. It analyzes data activities, yarn applications, jmx metrics, and daemon logs etc., provides state-of-the-art alert engine to identify security breach, performance issues and shows insights.
+		 
+	   ",,,http://incubator.apache.org/projects/eagle.html,https://github.com/apache/Eagle
+100,EasyAnt,easyant,1,1/31/2011,3/12/2013,t,t,f,"Ant
+		
+		(Antoine Lévy-Lambert)
+		 
+	   ","Easyant is a build system based on Apache Ant and Apache Ivy.
+		 
+	   ",,,http://incubator.apache.org/projects/easyant.html,https://github.com/apache/EasyAnt
+101,Empire-db,empire,1,7/8/2008,1/24/2012,t,t,f,"Incubator
+		 
+	   ","Data persistence component.
+		 
+	   ",,,http://incubator.apache.org/projects/empire-db.html,https://github.com/apache/Empire-db
+102,ESME,esme,1,12/2/2008,12/15/2010,t,t,t,"Incubator
+		 
+	   ","Enterprise Social Messaging Experiment (ESME) is a secure and highly scalable microsharing and micromessaging platform that allows people to discover and meet one another and get controlled access to other sources of information, all in a business process context.
+		 
+	   ",,,http://incubator.apache.org/projects/esme.html,https://github.com/apache/ESME
+103,Etch,etch,1,9/2/2008,1/16/2013,t,t,t,"Incubator
+		 
+	   ","A cross-platform, language- and transport-independent framework for building and consuming network services.
+		 
+	   ",,,http://incubator.apache.org/projects/etch.html,https://github.com/apache/Etch
+104,Falcon,falcon,1,3/27/2013,12/17/2014,t,t,f,"Incubator
+		
+		(Arun Murthy)
+		 
+	   ","A data processing and management solution for Hadoop designed for data motion, coordination of data pipelines, lifecycle management, and data discovery.
+		 
+	   ",,,http://incubator.apache.org/projects/falcon.html,https://github.com/apache/Falcon
+105,Felix,felix,1,7/19/2005,4/1/2007,t,t,f,"Incubator
+		 
+	   ","Implementation of the OSGi R4 specification. (Formerly known as Oscar)
+		 
+	   ",,,http://incubator.apache.org/projects/felix.html,https://github.com/apache/Felix
+106,Fineract,fineract,1,12/15/2015,4/19/2017,t,t,f,"Incubator
+		
+		(Ross Gardler)
+		 
+	   ","Fineract is an open source system for core banking as a platform.
+		 
+	   ",,,http://incubator.apache.org/projects/fineract.html,https://github.com/apache/Fineract
+107,Flex,flex,1,12/30/2011,12/19/2012,t,t,f,"Incubator
+		
+		(Bertrand Delacrétaz)
+		 
+	   ","Application framework for building Flash-based applications.
+		 
+	   ",,,http://incubator.apache.org/projects/flex.html,https://github.com/apache/Flex
+108,Flink,flink,1,4/14/2014,12/17/2014,t,t,f,"Incubator
+		
+		(Alan Gates)
+		 
+	   ","Flink is an open source system for expressive, declarative, fast, and efficient data analysis. Stratosphere combines the scalability and programming flexibility of distributed MapReduce-like platforms with the efficiency, out-of-core execution, and query optimization capabilities found in parallel databases.  Flink was originally known as Stratosphere when it entered the Incubator.
+		 
+	   ",,,http://incubator.apache.org/projects/flink.html,https://github.com/apache/Flink
+109,Flume,flume,1,6/13/2011,6/20/2012,t,t,f,"Incubator
+		 
+	   ","Flume is a distributed, reliable, and available system for efficiently collecting, aggregating, and moving large amounts of log data from many different sources to a centralized data store.
+		 
+	   ",,,http://incubator.apache.org/projects/flume.html,https://github.com/apache/Flume
+110,Fluo,fluo,1,5/17/2016,7/19/2017,t,t,f,"Incubator
+		
+		(Billie Rinaldi)
+		 
+	   ","Fluo is a distributed system for incrementally processing large data sets stored in Accumulo.
+		 
+	   ",,,http://incubator.apache.org/projects/fluo.html,https://github.com/apache/Fluo
+111,FreeMarker,freemarker,1,7/1/2015,3/21/2018,t,f,f,"Incubator
+		
+		(Jacopo Cappellato)
+		 
+	   ","FreeMarker is a template engine, i.e. a generic tool to generate text output based on templates. FreeMarker is implemented in Java as a class library for programmers.
+		 
+	   ",,,http://incubator.apache.org/projects/freemarker.html,https://github.com/apache/FreeMarker
+112,FtpServer,ftpserver,1,3/29/2003,12/18/2007,t,t,f,"Incubator
+		 
+	   ","A complete FTP Server based on Mina I/O system.
+		 
+	   ",,,http://incubator.apache.org/projects/ftpserver.html,https://github.com/apache/FtpServer
+113,Geode,geode,1,4/27/2015,11/16/2016,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","Geode is a data management platform that provides real-time, consistent access to data-intensive applications throughout widely distributed cloud architectures.
+		 
+	   ",,,http://incubator.apache.org/projects/geode.html,https://github.com/apache/Geode
+114,Geronimo,geronimo,1,8/6/2003,5/26/2004,t,t,f,"Board
+		 
+	   ","J2EE Container
+		 
+	   ",,,http://incubator.apache.org/projects/geronimo.html,https://github.com/apache/Geronimo
+115,Giraph,giraph,1,8/1/2011,5/16/2012,t,t,f,"Incubator
+		 
+	   ","Giraph is a large-scale, fault-tolerant, Bulk Synchronous Parallel (BSP)-based graph processing framework.
+		 
+	   ",,,http://incubator.apache.org/projects/giraph.html,https://github.com/apache/Giraph
+116,Gora,gora,1,9/26/2010,1/15/2012,t,t,f,"Incubator
+		 
+	   ","Gora is an ORM framework for column stores such as Apache HBase and Apache Cassandra with a specific focus on Hadoop.
+		 
+	   ",,,http://incubator.apache.org/projects/gora.html,https://github.com/apache/Gora
+117,Griffin,griffin,1,12/5/2016,11/21/2018,t,t,f,"Incubator
+		
+		(Henry Saputra)
+		 
+	   ","Griffin is a open source Data Quality solution for distributed data systems at any scale in both streaming or batch data context
+		 
+	   ",,,http://incubator.apache.org/projects/griffin.html,https://github.com/apache/Griffin
+118,Groovy,groovy,1,3/17/2015,11/18/2015,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","Groovy is an object-oriented programming language for the Java platform. It is a language with features similar to those of Python, Ruby, Java, Perl, and Smalltalk.
+		 
+	   ",,,http://incubator.apache.org/projects/groovy.html,https://github.com/apache/Groovy
+119,Guacamole,guacamole,1,2/10/2016,11/15/2017,t,t,f,"Incubator
+		
+		(Jean-Baptiste Onofre)
+		 
+	   ","Guacamole is an enterprise-grade, protocol-agnostic, remote desktop gateway. Combined with cloud hosting, Guacamole provides an excellent alternative to traditional desktops. Guacamole aims to make cloud-hosted desktop access preferable to traditional, local access.
+		 
+	   ",,,http://incubator.apache.org/projects/guacamole.html,https://github.com/apache/Guacamole
+120,Hama,hama,1,5/20/2008,5/16/2012,t,t,f,"Incubator
+		 
+	   ","Hama is a distributed computing framework based on BSP (Bulk Synchronous Parallel) computing techniques for massive scientific computations, e.g., matrix, graph and network algorithms.
+		 
+	   ",,,http://incubator.apache.org/projects/hama.html,https://github.com/apache/Hama
+121,Harmony,harmony,1,5/18/2005,10/29/2006,t,t,t,"Incubator
+		 
+	   ","Compatible implementation of J2SE
+		 
+	   ",,,http://incubator.apache.org/projects/harmony.html,https://github.com/apache/Harmony
+122,HAWQ,hawq,1,9/4/2015,8/15/2018,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","HAWQ is an advanced enterprise SQL on Hadoop analytic engine built around a robust and high-performance massively-parallel processing (MPP) SQL framework evolved from Pivotal Greenplum Database.
+		 
+	   ",,,http://incubator.apache.org/projects/hawq.html,https://github.com/apache/HAWQ
+123,HCatalog,hcatalog,1,3/14/2011,2/13/2013,t,t,f,"Incubator
+		 
+	   ","HCatalog is a table and storage management service for data created using Apache Hadoop.
+		
+		
+		HCatalog became part of the Hive project
+		 
+	   ",,,http://incubator.apache.org/projects/hcatalog.html,https://github.com/apache/HCatalog
+124,Helix,helix,1,10/14/2012,12/18/2013,t,t,f,"Incubator
+		
+		(Patrick Hunt)
+		 
+	   ","Apache Helix is a generic cluster management framework used to build distributed systems and provides automatic partition management, fault tolerance and elasticity.
+		 
+	   ",,,http://incubator.apache.org/projects/helix.html,https://github.com/apache/Helix
+125,Hermes,hermes,1,11/8/2004,6/3/2005,f,f,f,"Web Services
+		 
+	   ","A robust implementation of the OASIS WS-Notification (WSN) family of specifications
+		 
+	   ",,,http://incubator.apache.org/projects/hermes.html,https://github.com/apache/Hermes
+126,httpd-CLI,httpd-cli,1,7/15/2004,12/16/2004,f,f,f,"HTTP Server
+		 
+	   ","CLI integration project for httpd server
+		 
+	   ",,,http://incubator.apache.org/projects/httpd-cli.html,https://github.com/apache/httpd-CLI
+127,iBATIS,ibatis,1,8/16/2004,4/27/2005,t,t,t,"Incubator
+		 
+	   ","The iBATIS Data Mapper framework makes it easier to use a database with Java or .NET applications. iBATIS couples objects with stored procedures or SQL statements using a XML descriptor.
+		 
+	   ",,,http://incubator.apache.org/projects/ibatis.html,https://github.com/apache/iBATIS
+128,Ignite,ignite,1,10/1/2014,9/18/2015,t,t,f,"Incubator
+		
+		(Konstantin Boudnik)
+		 
+	   ","A unified In-Memory Data Fabric providing high-performance, distributed in-memory data management software layer between various data sources and user applications.
+		 
+	   ",,,http://incubator.apache.org/projects/ignite.html,https://github.com/apache/Ignite
+129,Impala,impala,1,12/3/2015,11/15/2017,t,t,f,"Incubator
+		
+		(Tom White)
+		 
+	   ","Impala is a high-performance C++ and Java SQL query engine for data stored in Apache Hadoop-based clusters.
+		 
+	   ",,,http://incubator.apache.org/projects/impala.html,https://github.com/apache/Impala
+130,Isis,isis,1,9/7/2010,10/17/2012,t,t,f,"Incubator
+		 
+	   ","The Isis project will be an extensible standards-based framework to rapidly develop and enterprise level deploy domain-driven (DDD) applications.
+		 
+	   ",,,http://incubator.apache.org/projects/isis.html,https://github.com/apache/Isis
+131,Ivy,ivy,1,10/23/2006,10/11/2007,t,t,f,"Ant
+		
+		(Antoine Lévy-Lambert,Sylvain Wallez)
+		 
+	   ","A java based tool for tracking, resolving and managing project dependencies.
+		 
+	   ",,,http://incubator.apache.org/projects/ivy.html,https://github.com/apache/Ivy
+132,Jackrabbit,jackrabbit,1,8/28/2004,3/15/2006,t,t,f,"Incubator
+		 
+	   ","Content Repository API based on JSR 170
+		 
+	   ",,,http://incubator.apache.org/projects/jackrabbit.html,https://github.com/apache/Jackrabbit
+133,JaxMe,jaxme,1,9/15/2003,3/17/2004,t,f,f,"Web Services
+		 
+	   ","Implementation of JAXB, the specification for Java/XML binding
+		 
+	   ",,,http://incubator.apache.org/projects/jaxme.html,https://github.com/apache/JaxMe
+134,jclouds,jclouds,1,4/29/2013,10/16/2013,t,t,f,"Incubator
+		
+		(Brian McCallister)
+		 
+	   ","A cloud agnostic library that enables developers to access a variety of supported cloud providers using one API
+		 
+	   ",,,http://incubator.apache.org/projects/jclouds.html,https://github.com/apache/jclouds
+135,JDO,jdo,1,5/18/2005,12/9/2005,t,t,f,"DB
+		 
+	   ","JDO2
+		 
+	   ",,,http://incubator.apache.org/projects/jdo.html,https://github.com/apache/JDO
+136,Jena,jena,1,11/23/2010,4/18/2012,t,t,f,"Incubator
+		 
+	   ","Java framework for building Semantic Web applications.
+		 
+	   ",,,http://incubator.apache.org/projects/jena.html,https://github.com/apache/Jena
+137,Johnzon,johnzon,1,6/9/2014,4/20/2016,t,t,f,"Incubator
+		
+		(Mark Struberg)
+		 
+	   ","Implementation of JSR-353 JavaTM API for JSON Processing (Renamed from Fleece)
+		 
+	   ",,,http://incubator.apache.org/projects/johnzon.html,https://github.com/apache/Johnzon
+138,Joshua,joshua,1,2/13/2016,10/17/2018,t,t,f,"Incubator
+		
+		(Chris Mattmann)
+		 
+	   ","Joshua is a statistical machine translation toolkit
+		 
+	   ",,,http://incubator.apache.org/projects/joshua.html,https://github.com/apache/Joshua
+139,JSPWiki,jspwiki,1,9/17/2007,7/19/2013,t,t,f,"Incubator
+		 
+	   ","Java-based wiki engine
+		 
+	   ",,,http://incubator.apache.org/projects/jspwiki.html,https://github.com/apache/JSPWiki
+140,jUDDI,juddi,1,9/15/2003,3/17/2004,t,t,f,"Web Services
+		 
+	   ","Implementation of a Universal Description Discovery and Integration (UDDI) registry
+		 
+	   ",,,http://incubator.apache.org/projects/juddi.html,https://github.com/apache/jUDDI
+141,Juneau,juneau,1,6/24/2016,10/18/2017,t,t,f,"Incubator
+		
+		(John D. Ament)
+		 
+	   ","Apache Juneau is a toolkit for marshalling POJOs to a wide variety of content types using a common framework, and for creating sophisticated self-documenting REST interfaces and microservices using VERY little code.
+		 
+	   ",,,http://incubator.apache.org/projects/juneau.html,https://github.com/apache/Juneau
+142,Kafka,kafka,1,7/4/2011,10/23/2012,t,t,f,"Incubator
+		 
+	   ","Kafka is a distributed publish-subscribe system for processing large amounts of streaming data.
+		 
+	   ",,,http://incubator.apache.org/projects/kafka.html,https://github.com/apache/Kafka
+143,Knox,knox,1,2/22/2013,2/19/2014,t,t,f,"Incubator
+		
+		(Devaraj Das)
+		 
+	   ","Knox Gateway is a system that provides a single point of secure access for Apache Hadoop clusters.
+		 
+	   ",,,http://incubator.apache.org/projects/knox.html,https://github.com/apache/Knox
+144,Kudu,kudu,1,12/3/2015,7/20/2016,t,t,f,"Incubator
+		
+		(Todd Lipcon)
+		 
+	   ","Kudu is a distributed columnar storage engine built for the Apache Hadoop ecosystem.
+		 
+	   ",,,http://incubator.apache.org/projects/kudu.html,https://github.com/apache/Kudu
+145,Kylin,kylin,1,11/25/2014,11/18/2015,t,t,f,"Incubator
+		
+		(Owen O’Malley)
+		 
+	   ","Kylin is a distributed and scalable OLAP engine built on Hadoop to support extremely large datasets.
+		 
+	   ",,,http://incubator.apache.org/projects/kylin.html,https://github.com/apache/Kylin
+146,Lens,lens,1,10/10/2014,8/19/2015,t,t,f,"Incubator
+		
+		(Vinod Kumar Vavilapalli)
+		 
+	   ","Lens is a platform that enables multi-dimensional queries in a unified way over datasets stored in multiple warehouses. Lens integrates Apache Hive with other data warehouses by tiering them together to form logical data cubes.
+		 
+	   ",,,http://incubator.apache.org/projects/lens.html,https://github.com/apache/Lens
+147,Lenya,lenya,1,3/15/2003,8/18/2004,t,t,t,"Cocoon
+		 
+	   ","Content Management and publishing system based on Cocoon
+		 
+	   ",,,http://incubator.apache.org/projects/lenya.html,https://github.com/apache/Lenya
+148,Libcloud,libcloud,1,11/1/2009,5/19/2011,t,f,f,"Incubator
+		 
+	   ","libcloud is a standard client library for many popular cloud providers, written in python
+		 
+	   ",,,http://incubator.apache.org/projects/libcloud.html,https://github.com/apache/Libcloud
+149,log4cxx,log4cxx,1,1/31/2004,1/11/2005,t,f,f,"Logging Services
+		 
+	   ","Logging for C++. N.B. the code has re-entered the Incubator as log4cxx2.
+		 
+	   ",,,http://incubator.apache.org/projects/log4cxx.html,https://github.com/apache/log4cxx
+150,log4cxx2,log4cxx2,1,12/9/2013,3/16/2017,f,f,f,"Logging Services
+		
+		(Christian Grobmeier)
+		 
+	   ","Logging for C++. N.B. This is a reboot of the Log4cxx podling which previously graduated.
+		 
+	   ",,,http://incubator.apache.org/projects/log4cxx2.html,https://github.com/apache/log4cxx2
+151,log4net,log4net,1,1/15/2004,2/21/2007,t,f,f,"Logging Services
+		 
+	   ","Logging for .NET
+		 
+	   ",,,http://incubator.apache.org/projects/log4net.html,https://github.com/apache/log4net
+152,Log4php,log4php,1,1/31/2004,3/7/2010,t,f,f,"Logging Services
+		 
+	   ","Logging for PHP.
+		 
+	   ",,,http://incubator.apache.org/projects/log4php.html,https://github.com/apache/Log4php
+153,Lucene.NET,lucenenet,1,2/5/2011,8/15/2012,t,t,f,"Lucene
+		 
+	   ","Lucene.NET is a source code, class-per-class, API-per-API and algorithmatic port of the Java Lucene search engine to the C# and .NET platform utilizing Microsoft .NET Framework.
+		 
+	   ",,,http://incubator.apache.org/projects/lucene.net.html,https://github.com/apache/Lucene.NET
+154,Lucy,lucy,1,7/22/2010,2/22/2012,t,t,t,"Incubator
+		 
+	   ","A loose port of the Lucene search engine library, written in C and targeted at dynamic language users.
+		 
+	   ",,,http://incubator.apache.org/projects/lucy.html,https://github.com/apache/Lucy
+155,MADlib,madlib,1,9/15/2015,7/19/2017,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","Big Data Machine Learning in SQL for Data Scientists.
+		 
+	   ",,,http://incubator.apache.org/projects/madlib.html,https://github.com/apache/MADlib
+156,ManifoldCF,manifoldcf,1,1/10/2010,5/16/2012,t,t,f,"Lucene
+		 
+	   ","Connectors for content repositories like Sharepoint, Documentum, etc.
+		 
+	   ",,,http://incubator.apache.org/projects/manifoldcf.html,https://github.com/apache/ManifoldCF
+157,Marmotta,marmotta,1,12/3/2012,11/20/2013,t,t,f,"Incubator
+		
+		(Andy Seaborne)
+		 
+	   ","An open implementation of a Linked Data Platform.
+		 
+	   ",,,http://incubator.apache.org/projects/marmotta.html,https://github.com/apache/Marmotta
+158,MerlinDeveloper,merlin-developer,1,1/15/2004,1/15/2004,f,f,f,"Avalon
+		 
+	   ","Merlin eclipse plugin merged with an existing eclipse plugin already at avalon.
+		 
+	   ",,,http://incubator.apache.org/projects/merlin-developer.html,https://github.com/apache/MerlinDeveloper
+159,Mesos,mesos,1,12/23/2010,6/19/2013,t,t,f,"Incubator
+		 
+	   ","Mesos is a cluster manager that provides resource sharing and isolation across cluster applications.
+		 
+	   ",,,http://incubator.apache.org/projects/mesos.html,https://github.com/apache/Mesos
+160,MetaModel,metamodel,1,6/12/2013,11/20/2014,t,t,f,"Incubator
+		 
+	   ","MetaModel is a data access framework, providing a common interface for exploration and querying of different types of datastores.
+		 
+	   ",,,http://incubator.apache.org/projects/metamodel.html,https://github.com/apache/MetaModel
+161,Metron,metron,1,12/6/2015,4/19/2017,t,t,f,"Incubator
+		 
+	   ","Metron is a project dedicated to providing an extensible and scalable advanced network security analytics tool. It has strong foundations in the Apache Hadoop ecosystem.
+		 
+	   ",,,http://incubator.apache.org/projects/metron.html,https://github.com/apache/Metron
+162,Mnemonic,mnemonic,1,3/3/2016,11/15/2017,t,t,f,"Incubator
+		
+		(Patrick Hunt)
+		 
+	   ","Mnemonic is a Java based non-volatile memory library for in-place structured data processing and computing.
+		 
+	   ",,,http://incubator.apache.org/projects/mnemonic.html,https://github.com/apache/Mnemonic
+163,mod_ftp,mod_ftp,1,8/6/2005,2/21/2007,t,t,f,"HTTP Server
+		 
+	   ","FTP protocol module for Apache httpd 2.x
+		 
+	   ",,,http://incubator.apache.org/projects/mod_ftp.html,https://github.com/apache/mod_ftp
+164,MRUnit,mrunit,1,3/8/2011,5/16/2012,t,t,t,"Incubator
+		 
+	   ","MRUnit is a library to support unit testing of Hadoop MapReduce jobs.
+		 
+	   ",,,http://incubator.apache.org/projects/mrunit.html,https://github.com/apache/MRUnit
+165,Muse,muse,1,11/8/2004,6/3/2005,t,f,t,"Web Services
+		 
+	   ","A robust implementation of the OASIS WSDM, Management using Web Services (MuWS) specification
+		 
+	   ",,,http://incubator.apache.org/projects/muse.html,https://github.com/apache/Muse
+166,MyFaces,myfaces,1,7/16/2004,3/9/2005,t,t,f,"Incubator
+		 
+	   ","MyFaces is a framework for building Java Server application GUIs based on JavaServer Faces (certified implementation of JSR-127).
+		 
+	   ",,,http://incubator.apache.org/projects/myfaces.html,https://github.com/apache/MyFaces
+167,Mynewt,mynewt,1,10/20/2015,6/21/2017,t,t,f,"Incubator
+		
+		(Marvin Humphrey)
+		 
+	   ","Mynewt is a real-time operating system for constrained embedded systems like wearables, lightbulbs, locks and doorbells. It works on a variety of 32-bit MCUs (microcontrollers), including ARM Cortex-M and MIPS architectures.
+		 
+	   ",,,http://incubator.apache.org/projects/mynewt.html,https://github.com/apache/Mynewt
+168,NetBeans,netbeans,1,10/1/2016,4/17/2019,t,t,f,"Incubator
+		
+		(Bertrand Delacretaz)
+		 
+	   ","NetBeans is a development environment, tooling platform and application framework.
+		 
+	   ",,,http://incubator.apache.org/projects/netbeans.html,https://github.com/apache/NetBeans
+169,NiFi,nifi,1,11/24/2014,7/15/2015,t,t,f,"Incubator
+		
+		(Benson Margulies)
+		 
+	   ","NiFi is a dataflow system based on the concepts of flow-based programming.
+		 
+	   ",,,http://incubator.apache.org/projects/nifi.html,https://github.com/apache/NiFi
+170,Nutch,nutch,1,1/15/2005,6/1/2005,t,t,f,"Incubator
+		 
+	   ","Web search software.
+		 
+	   ",,,http://incubator.apache.org/projects/nutch.html,https://github.com/apache/Nutch
+222,Streams,streams,1,11/20/2012,7/19/2017,t,t,f,"Incubator
+		
+		(Matt Franklin)
+		 
+	   ","Apache Streams is a lightweight server for ActivityStreams.
+		 
+	   ",,,http://incubator.apache.org/projects/streams.html,https://github.com/apache/Streams
+171,Nuvem,nuvem,1,6/24/2010,11/29/2012,t,t,f,"Incubator
+		 
+	   ","
+            Nuvem defines an open application programming interface for common cloud application services, allowing applications to be easily ported across the most popular cloud platforms.
+            The podling was voted to become part of Tuscany in Nov 2012 but (as of Aug 2014) nothing has happened. Tuscany was terminated in May 2016.
+        
+		 
+	   ",,,http://incubator.apache.org/projects/nuvem.html,https://github.com/apache/Nuvem
+172,Ode,ode,1,2/17/2006,7/18/2007,t,t,f,"Incubator
+		 
+	   ","Orchestration Director Engine
+		 
+	   ",,,http://incubator.apache.org/projects/ode.html,https://github.com/apache/Ode
+173,OFBiz,ofbiz,1,1/31/2006,12/20/2006,t,t,f,"Incubator
+		 
+	   ","The Open For Business Project (OFBiz) is an open source enterprise automation software project.
+		 
+	   ",,,http://incubator.apache.org/projects/ofbiz.html,https://github.com/apache/OFBiz
+174,OGNL,ognl,1,4/26/2011,8/30/2011,f,f,f,"Incubator
+		
+		(Lukasz Lenart)
+		 
+	   ","Object-Graph Notation Language implementation in Java
+		 
+	   ",,,http://incubator.apache.org/projects/ognl.html,https://github.com/apache/OGNL
+175,Olingo,olingo,1,7/8/2013,3/19/2014,t,t,f,"Incubator
+		
+		(Florian Müller)
+		 
+	   ","OData implementation in Java
+		 
+	   ",,,http://incubator.apache.org/projects/olingo.html,https://github.com/apache/Olingo
+176,Onami,onami,1,11/14/2012,4/17/2013,t,t,t,"Incubator
+		
+		(Simone Tripodi)
+		 
+	   ","Apache Onami aims to create a community focused on the development and maintenance of a set of Google Guice extensions not provided out of the box by the library itself nor the Google developers team, such as integration with 3rd part frameworks or extra functionalities.
+		 
+	   ",,,http://incubator.apache.org/projects/onami.html,https://github.com/apache/Onami
+177,OODT,oodt,1,1/21/2010,11/17/2010,t,t,f,"Incubator
+		 
+	   ","A grid middleware framework for science data processing, information integration, and retrieval.
+		 
+	   ",,,http://incubator.apache.org/projects/oodt.html,https://github.com/apache/OODT
+178,Oozie,oozie,1,7/11/2011,8/28/2012,t,t,f,"Incubator
+		 
+	   ","Server-based workflow scheduling and coordination system to manage data processing jobs for Apache Hadoop
+		 
+	   ",,,http://incubator.apache.org/projects/oozie.html,https://github.com/apache/Oozie
+179,Open Climate Workbench,climate,1,2/15/2013,2/19/2014,t,t,f,"Incubator
+		
+		(Chris A. Mattmann)
+		 
+	   ","A tool for scalable comparison of remote sensing observations to climate model outputs, regionally and globally.
+		 
+	   ",,,http://incubator.apache.org/projects/climate.html,https://github.com/apache/Open Climate Workbench
+180,OpenEJB,openejb,1,7/5/2006,5/16/2007,f,f,f,"Incubator
+		 
+	   ","OpenEJB EJB Server and Container
+		 
+	   ",,,http://incubator.apache.org/projects/openejb.html,https://github.com/apache/OpenEJB
+181,OpenJPA,openjpa,1,4/10/2006,5/16/2007,t,t,f,"Incubator
+		 
+	   ","OpenJPA is an open source implementation of the Java Persistence API
+		 
+	   ",,,http://incubator.apache.org/projects/openjpa.html,https://github.com/apache/OpenJPA
+182,Openmeetings,openmeetings,1,11/12/2011,1/18/2013,t,t,f,"Incubator
+		 
+	   ","Openmeetings is a web conferencing solution.
+		 
+	   ",,,http://incubator.apache.org/projects/openmeetings.html,https://github.com/apache/Openmeetings
+183,OpenNLP,opennlp,1,11/23/2010,2/15/2012,t,t,f,"Incubator
+		 
+	   ","OpenNLP is a machine learning based toolkit for the processing of natural language text.
+		 
+	   ",,,http://incubator.apache.org/projects/opennlp.html,https://github.com/apache/OpenNLP
+184,OpenOffice.org,openoffice,1,6/13/2011,10/17/2012,t,t,f,"Incubator
+		 
+	   ","OpenOffice.org is comprised of six personal productivity applications: a word processor (and its web-authoring component), spreadsheet, presentation graphics, drawing, equation editor, and database.
+		 
+	   ",,,http://incubator.apache.org/projects/openofficeorg.html,https://github.com/apache/OpenOffice.org
+185,OpenWebBeans,openwebbeans,1,10/26/2008,12/17/2009,t,t,f,"Incubator
+		 
+	   ","JSR-299 Implementation
+		 
+	   ",,,http://incubator.apache.org/projects/openwebbeans.html,https://github.com/apache/OpenWebBeans
+186,OpenWhisk,openwhisk,1,11/23/2016,7/17/2019,t,t,f,"Incubator
+		
+		(Sam Ruby)
+		 
+	   ","distributed Serverless computing platform
+		 
+	   ",,,http://incubator.apache.org/projects/openwhisk.html,https://github.com/apache/OpenWhisk
+187,Parquet,parquet,1,5/20/2014,4/22/2015,t,t,f,"Incubator
+		
+		(Todd Lipcon)
+		 
+	   ","Parquet is a columnar storage format for Hadoop.
+		 
+	   ",,,http://incubator.apache.org/projects/parquet.html,https://github.com/apache/Parquet
+188,PDFBox,pdfbox,1,2/7/2008,10/21/2009,t,t,f,"Incubator
+		 
+	   ","PDF library (reading, text extraction, manipulation, viewer)
+		 
+	   ",,,http://incubator.apache.org/projects/pdfbox.html,https://github.com/apache/PDFBox
+189,Phoenix,phoenix,1,12/11/2013,5/21/2014,t,t,f,"Incubator
+		
+		(Michael Stack)
+		 
+	   ","Phoenix is an open source SQL query engine for Apache HBase, a NoSQL data store. It is accessed as a JDBC driver and enables querying and managing HBase tables using SQL.
+		 
+	   ",,,http://incubator.apache.org/projects/phoenix.html,https://github.com/apache/Phoenix
+190,Pig,pig,1,10/2/2007,10/22/2008,t,t,f,"Incubator
+		 
+	   ","Pig is a platform for analyzing large datasets.
+		 
+	   ",,,http://incubator.apache.org/projects/pig.html,https://github.com/apache/Pig
+191,Pivot,pivot,1,1/26/2009,12/16/2009,t,t,f,"Incubator
+		 
+	   ","A platform for building rich internet applications in Java.
+		 
+	   ",,,http://incubator.apache.org/projects/pivot.html,https://github.com/apache/Pivot
+192,PLC4X,plc4x,1,12/18/2017,4/17/2019,t,t,f,"Incubator
+		
+		(Justin Mclean)
+		 
+	   ","PLC4X is a set of libraries for communicating with industrial programmable logic controllers (PLCs) using a variety of protocols but with a shared API.
+		 
+	   ",,,http://incubator.apache.org/projects/plc4x.html,https://github.com/apache/PLC4X
+193,Pluto,pluto,1,9/30/2003,5/15/2004,t,f,f,"Jakarta
+		 
+	   ","JSR 168 Reference Implementation
+		 
+	   ",,,http://incubator.apache.org/projects/pluto.html,https://github.com/apache/Pluto
+194,PredictionIO,predictionio,1,5/26/2016,10/18/2017,t,t,f,"Incubator
+		
+		(Andrew Purtell)
+		 
+	   ","PredictionIO is an open source Machine Learning Server built on top of state-of-the-art open source stack, that enables developers to manage and deploy production-ready predictive services for various kinds of machine learning tasks.
+		 
+	   ",,,http://incubator.apache.org/projects/predictionio.html,https://github.com/apache/PredictionIO
+195,Pulsar,pulsar,1,6/1/2017,9/19/2018,t,t,f,"Incubator
+		
+		(Bryan Call)
+		 
+	   ","Pulsar is a highly scalable, low latency messaging platform running on commodity hardware. It provides simple pub-sub semantics over topics, guaranteed at-least-once delivery of messages, automatic cursor management for subscribers, and cross-datacenter replication.
+		 
+	   ",,,http://incubator.apache.org/projects/pulsar.html,https://github.com/apache/Pulsar
+196,Qpid,qpid,1,8/27/2006,12/18/2008,t,t,f,"Incubator
+		 
+	   ","Qpid provides multiple language implementations of the Advanced Messaged Queuing Protocol (AMQP)
+		 
+	   ",,,http://incubator.apache.org/projects/qpid.html,https://github.com/apache/Qpid
+250,Wookie,wookie,1,7/17/2009,11/22/2012,t,t,t,"Incubator
+		 
+	   ","a W3C widget engine with Google Wave and Open Social Extensions.
+		 
+	   ",,,http://incubator.apache.org/projects/wookie.html,https://github.com/apache/Wookie
+197,Ranger,ranger,1,7/24/2014,1/18/2017,t,t,f,"Incubator
+		
+		(Owen O'Malley)
+		 
+	   ","
+            The Ranger project is a framework to enable, monitor and manage comprehensive data security across the Hadoop platform.
+            (The podling was originally called Argus)
+        
+		 
+	   ",,,http://incubator.apache.org/projects/ranger.html,https://github.com/apache/Ranger
+198,RAT,rat,1,1/6/2008,4/18/2012,f,f,f,"Incubator
+		 
+	   ","Comprehension and auditing for distributions and source code
+		
+		
+		Became part of new Apache Creadur TLP
+		 
+	   ",,,http://incubator.apache.org/projects/rat.html,https://github.com/apache/RAT
+199,Rave,rave,1,3/1/2011,3/21/2012,t,t,t,"Incubator
+		 
+	   ","Rave is A WEb And SOcial Mashup Engine.
+		 
+	   ",,,http://incubator.apache.org/projects/rave.html,https://github.com/apache/Rave
+200,REEF,reef,1,8/12/2014,11/18/2015,t,t,f,"Incubator
+		 
+	   ","REEF (Retainable Evaluator Execution Framework) is a scale-out computing fabric that eases the development of Big Data applications on top of resource managers such as Apache YARN and Mesos.
+		 
+	   ",,,http://incubator.apache.org/projects/reef.html,https://github.com/apache/REEF
+201,River,river,1,12/26/2006,1/19/2011,t,t,f,"Incubator
+		 
+	   ","River : Jini technology
+		 
+	   ",,,http://incubator.apache.org/projects/river.html,https://github.com/apache/River
+202,RocketMQ,rocketmq,1,11/21/2016,9/20/2017,t,t,f,"Incubator
+		
+		(Bruce Snyder)
+		 
+	   ","RocketMQ is a fast, low latency, reliable, scalable, distributed, easy to use message-oriented middleware, especially for processing large amounts of streaming data.
+		 
+	   ",,,http://incubator.apache.org/projects/rocketmq.html,https://github.com/apache/RocketMQ
+203,Roller,roller,1,6/20/2005,2/21/2007,t,t,f,"Incubator
+		 
+	   ","Roller blog server
+		 
+	   ",,,http://incubator.apache.org/projects/roller.html,https://github.com/apache/Roller
+204,Samza,samza,1,7/30/2013,1/21/2015,t,t,f,"Incubator
+		
+		(Jakob Homan)
+		 
+	   ","
+            Samza is a stream processing system for running continuous computation on
+            infinite streams of data.
+        
+		 
+	   ",,,http://incubator.apache.org/projects/samza.html,https://github.com/apache/Samza
+205,Sanselan,sanselan,1,9/9/2007,6/30/2009,t,t,f,"Incubator
+		
+		(Carsten Ziegeler)
+		 
+	   ","The Sanselan Project is a pure-java image library for reading and writing a variety of image formats.
+		 
+	   ",,,http://incubator.apache.org/projects/sanselan.html,https://github.com/apache/Sanselan
+206,Sentry,sentry,1,8/8/2013,3/16/2016,t,t,f,"Incubator
+		
+		(Arvind Prabhakar)
+		 
+	   ","
+            Sentry is a highly modular system for providing fine grained role
+            based authorization to both data and metadata stored on an Apache Hadoop cluster.
+        
+		 
+	   ",,,http://incubator.apache.org/projects/sentry.html,https://github.com/apache/Sentry
+207,ServiceComb,servicecomb,1,11/22/2017,10/17/2018,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","ServiceComb is a microservice framework that provides a set of tools and components to make development and deployment of cloud applications easier.
+		 
+	   ",,,http://incubator.apache.org/projects/servicecomb.html,https://github.com/apache/ServiceComb
+208,ServiceMix,servicemix,1,12/1/2005,9/19/2007,t,t,f,"Geronimo
+		 
+	   ","The ServiceMix project will create an ESB and component suite based on the Java Business Interface (JBI) standard - JSR 208.
+		 
+	   ",,,http://incubator.apache.org/projects/servicemix.html,https://github.com/apache/ServiceMix
+209,Shindig,shindig,1,12/3/2007,1/21/2010,t,t,t,"Incubator
+		 
+	   ","The Shindig Project is an OpenSocial container.
+		 
+	   ",,,http://incubator.apache.org/projects/shindig.html,https://github.com/apache/Shindig
+210,Shiro,shiro,1,5/20/2008,9/22/2010,t,t,f,"Incubator
+		 
+	   ","Security framework. (Initially known as JSecurity or Ki, renamed June 2009)
+		 
+	   ",,,http://incubator.apache.org/projects/shiro.html,https://github.com/apache/Shiro
+211,SIS,sis,1,2/21/2010,9/19/2012,t,t,f,"Incubator
+		 
+	   ","The Spatial Information System (SIS) Project is a toolkit that spatial information system builders or users can leverage to build applications containing location context.
+		 
+	   ",,,http://incubator.apache.org/projects/sis.html,https://github.com/apache/SIS
+212,SkyWalking,skywalking,1,12/8/2017,4/17/2019,t,t,f,"Incubator
+		
+		(Mick Semb Wever)
+		 
+	   ","Skywalking is an APM (application performance monitor), especially for microservice, Cloud Native and container-based architecture systems. Also known as a distributed tracing system. It provides an automatic way to instrument applications: no need to change any of the source code of the target application; and an collector with an very high efficiency streaming module.
+		 
+	   ",,,http://incubator.apache.org/projects/skywalking.html,https://github.com/apache/SkyWalking
+213,Sling,sling,1,9/9/2007,6/17/2009,t,t,f,"Board
+		 
+	   ","Sling is a framework to develop content centric web applications based on the idea of modularizing the rendering of HTTP resources.
+		 
+	   ",,,http://incubator.apache.org/projects/sling.html,https://github.com/apache/Sling
+214,Solr,solr,1,1/17/2006,1/17/2007,t,t,f,"Lucene
+		 
+	   ","Full Text Search Server
+		 
+	   ",,,http://incubator.apache.org/projects/solr.html,https://github.com/apache/Solr
+215,SpamAssassin,spamassassin,1,12/20/2003,6/23/2004,t,t,f,"Board
+		 
+	   ","Mail filter to identify spam.
+		 
+	   ",,,http://incubator.apache.org/projects/spamassassin.html,https://github.com/apache/SpamAssassin
+216,Spark,spark,1,6/19/2013,2/19/2014,t,t,f,"Incubator
+		 
+	   ","Spark is an open source system for fast and flexible large-scale data analysis. Spark provides a general purpose runtime that supports low-latency execution in several forms.
+		 
+	   ",,,http://incubator.apache.org/projects/spark.html,https://github.com/apache/Spark
+217,Sqoop,sqoop,1,6/13/2011,3/21/2012,t,t,f,"Incubator
+		 
+	   ","Sqoop is a tool designed for efficiently transferring bulk data between Apache Hadoop and structured datastores such as relational databases.
+		 
+	   ",,,http://incubator.apache.org/projects/sqoop.html,https://github.com/apache/Sqoop
+218,Stanbol,stanbol,1,11/15/2010,9/19/2012,t,t,f,"Board
+		
+		(Bertrand Delacrétaz)
+		 
+	   ","A modular software stack and reusable set of components for semantic content management
+		 
+	   ",,,http://incubator.apache.org/projects/stanbol.html,https://github.com/apache/Stanbol
+219,stdcxx,stdcxx,1,5/19/2005,11/14/2007,t,t,t,"Incubator
+		 
+	   ","The Apache C++ Standard Library project is a complete implementation of the ISO/IEC 14882 C++ Standard Library.
+		 
+	   ",,,http://incubator.apache.org/projects/stdcxx.html,https://github.com/apache/stdcxx
+220,Storm,storm,1,9/18/2013,9/17/2014,t,t,f,"Incubator
+		
+		(Doug Cutting)
+		 
+	   ","Storm is a distributed, fault-tolerant, and high-performance realtime computation system that provides strong guarantees on the processing of data.
+		 
+	   ",,,http://incubator.apache.org/projects/storm.html,https://github.com/apache/Storm
+221,Stratos,stratos,1,6/20/2013,5/21/2014,t,t,t,"Incubator
+		 
+	   ","Stratos will be a polyglot PaaS framework, providing developers a cloud-based environment for developing, testing, and running scalable applications, and IT providers high utilization rates, automated resource management, and platform-wide insight including monitoring and billing.
+		 
+	   ",,,http://incubator.apache.org/projects/stratos.html,https://github.com/apache/Stratos
+223,Subversion,subversion,1,11/7/2009,2/17/2010,t,t,f,"Incubator
+		 
+	   ","Subversion is an open-source version control system, with a long and detailed list of features. (See http://subversion.apache.org/features.html)
+		 
+	   ",,,http://incubator.apache.org/projects/subversion.html,https://github.com/apache/Subversion
+224,Synapse,synapse,1,8/22/2005,1/2/2007,t,f,f,"Web Services
+		 
+	   ","Web Services Mediation Framework
+		 
+	   ",,,http://incubator.apache.org/projects/synapse.html,https://github.com/apache/Synapse
+225,Syncope,syncope,1,2/10/2012,11/21/2012,t,t,f,"Incubator
+		
+		(Simone Tripodi)
+		 
+	   ","An Open Source system for managing digital identities in enterprise environments, implemented in JEE technology
+		 
+	   ",,,http://incubator.apache.org/projects/syncope.html,https://github.com/apache/Syncope
+226,SystemML,systemml,1,11/2/2015,5/18/2017,t,t,f,"Incubator
+		
+		(Luciano Resende)
+		 
+	   ","SystemML provides declarative large-scale machine learning (ML) that aims at flexible specification of ML algorithms and automatic generation of hybrid runtime plans ranging from single node, in-memory computations, to distributed computations such as Apache Hadoop MapReduce and Apache Spark.
+		 
+	   ",,,http://incubator.apache.org/projects/systemml.html,https://github.com/apache/SystemML
+227,Tajo,tajo,1,3/7/2013,4/1/2014,t,t,f,"Incubator
+		
+		(Jakob Homan)
+		 
+	   ","Tajo is a distributed data warehouse system for Hadoop.
+		 
+	   ",,,http://incubator.apache.org/projects/tajo.html,https://github.com/apache/Tajo
+228,Tapestry,tapestry,1,4/1/2003,5/29/2003,t,f,f,"Jakarta
+		 
+	   ","Alternative framework to JSP and Velocity scripting environments
+		 
+	   ",,,http://incubator.apache.org/projects/tapestry.html,https://github.com/apache/Tapestry
+229,Tez,tez,1,2/24/2013,7/16/2014,t,t,f,"Incubator
+		
+		(Arun Murthy)
+		 
+	   ","Tez is an effort to develop a generic application framework which can be used to process arbitrarily complex data-processing tasks and also a re-usable set of data-processing primitives which can be used by other projects.
+		 
+	   ",,,http://incubator.apache.org/projects/tez.html,https://github.com/apache/Tez
+230,Thrift,thrift,1,4/18/2008,10/20/2010,t,t,f,"Lucene
+		
+		(Doug Cutting)
+		 
+	   ","Cross-language serialization and RPC framework.
+		 
+	   ",,,http://incubator.apache.org/projects/thrift.html,https://github.com/apache/Thrift
+231,Tika,tika,1,3/22/2007,10/28/2008,t,t,f,"Lucene
+		 
+	   ","Content analysis toolkit
+		 
+	   ",,,http://incubator.apache.org/projects/tika.html,https://github.com/apache/Tika
+232,TinkerPop,tinkerpop,1,1/16/2015,5/23/2016,t,t,f,"Incubator
+		
+		(David Nalley)
+		 
+	   ","TinkerPop is a graph computing framework written in Java
+		 
+	   ",,,http://incubator.apache.org/projects/tinkerpop.html,https://github.com/apache/TinkerPop
+233,Tobago,tobago,1,10/27/2005,3/23/2006,f,f,f,"MyFaces
+		
+		(Manfred Geiler)
+		 
+	   ","A JSF based framework for web-applications.
+		 
+	   ",,,http://incubator.apache.org/projects/tobago.html,https://github.com/apache/Tobago
+234,Traffic Control,trafficcontrol,1,7/12/2016,5/16/2018,t,t,f,"Incubator
+		 
+	   ","Apache Traffic Control can be used to build, monitor, configure, and provision a large-scale content delivery network (CDN).
+		 
+	   ",,,http://incubator.apache.org/projects/trafficcontrol.html,https://github.com/apache/Traffic Control
+235,Traffic Server,trafficserver,1,7/13/2009,4/21/2010,t,t,f,"Incubator
+		 
+	   ","A scalable and extensible HTTP proxy server and cache.
+		 
+	   ",,,http://incubator.apache.org/projects/trafficserver.html,https://github.com/apache/Traffic Server
+236,Trafodion,trafodion,1,5/24/2015,12/20/2017,t,t,f,"Incubator
+		
+		(Michael Stack)
+		 
+	   ","Trafodion is a webscale SQL-on-Hadoop solution enabling transactional or operational workloads on Hadoop.
+		 
+	   ",,,http://incubator.apache.org/projects/trafodion.html,https://github.com/apache/Trafodion
+237,Trinidad,trinidad,1,3/8/2006,4/22/2007,f,f,f,"MyFaces
+		 
+	   ","JSF Component Library
+		 
+	   ",,,http://incubator.apache.org/projects/trinidad.html,https://github.com/apache/Trinidad
+238,Tuscany,tuscany,1,12/7/2005,5/21/2008,t,t,t,"Web Services
+		 
+	   ","Service Component Architecture implementation
+		 
+	   ",,,http://incubator.apache.org/projects/tuscany.html,https://github.com/apache/Tuscany
+239,Twill,twill,1,11/14/2013,6/15/2016,t,t,f,"Incubator
+		
+		(Vinod K)
+		 
+	   ","Twill is an abstraction over Apache Hadoop YARN that reduces the complexity of developing distributed applications, allowing developers to focus more on their business logic
+		 
+	   ",,,http://incubator.apache.org/projects/twill.html,https://github.com/apache/Twill
+240,UIMA,uima,1,10/23/2006,3/18/2010,t,t,f,"Incubator
+		 
+	   ","Framework for analysing unstructured data.
+		 
+	   ",,,http://incubator.apache.org/projects/uima.html,https://github.com/apache/UIMA
+241,Unomi,unomi,1,10/5/2015,2/20/2019,t,t,f,"Incubator
+		
+		(Jean-Baptiste Onofre)
+		 
+	   ","Unomi is a reference implementation of the OASIS Context Server specification currently being worked on by the OASIS Context Server Technical Committee. It provides a high-performance user profile and event tracking server.
+		 
+	   ",,,http://incubator.apache.org/projects/unomi.html,https://github.com/apache/Unomi
+242,Usergrid,usergrid,1,10/3/2013,8/19/2015,t,t,f,"Incubator
+		 
+	   ","Usergrid is Backend-as-a-Service (BaaS) composed of an integrated database (Cassandra), application layer and client tier with SDKs for developers.
+		 
+	   ",,,http://incubator.apache.org/projects/usergrid.html,https://github.com/apache/Usergrid
+243,VCL,vcl,1,10/6/2008,6/20/2012,t,t,f,"Incubator
+		 
+	   ","Virtual Computing Lab. Framework for creating, dispensing and running virtual images.
+		 
+	   ",,,http://incubator.apache.org/projects/vcl.html,https://github.com/apache/VCL
+244,VXQuery,vxquery,1,7/6/2009,7/16/2014,t,t,f,"Incubator
+		
+		(Cezar Andrei)
+		 
+	   ","A standards compliant XML Query processor.
+		 
+	   ",,,http://incubator.apache.org/projects/vxquery.html,https://github.com/apache/VXQuery
+245,WebWork 2,webwork2,1,1/15/2006,5/24/2006,f,f,f,"Struts
+		
+		(Don Brown)
+		 
+	   ","A Java web-application development framework
+		 
+	   ",,,http://incubator.apache.org/projects/webwork2.html,https://github.com/apache/WebWork 2
+246,Whirr,whirr,1,5/11/2010,8/17/2011,t,t,t,"Incubator
+		 
+	   ","Whirr provides code for running a variety of software services on cloud infrastructure.
+		 
+	   ",,,http://incubator.apache.org/projects/whirr.html,https://github.com/apache/Whirr
+247,Wicket,wicket,1,8/28/2006,6/20/2007,t,t,f,"Incubator
+		 
+	   ","A web application framework that focusses on bringing plain object oriented Java programming to the web tier
+		 
+	   ",,,http://incubator.apache.org/projects/wicket.html,https://github.com/apache/Wicket
+248,Wink,wink,1,5/27/2009,12/19/2012,t,t,t,"Incubator
+		 
+	   ","Apache Wink is a project that enables development and consumption of REST style web services. The core server runtime is based on the JAX-RS (JSR 311) standard. The project also introduces a client runtime which can leverage certain components of the server-side runtime. Apache Wink will deliver component technology that can be easily integrated into a variety of environments.
+		 
+	   ",,,http://incubator.apache.org/projects/wink.html,https://github.com/apache/Wink
+249,Woden,woden,1,3/24/2005,12/8/2007,t,f,f,"Web Services
+		 
+	   ","Implementation of WSDL 2.0
+		 
+	   ",,,http://incubator.apache.org/projects/woden.html,https://github.com/apache/Woden
+251,XMLBeans,xmlbeans,1,7/30/2003,6/23/2004,t,t,t,"XML
+		 
+	   ","XML-Java binding tool with 100%% support for XML Schema and full Infoset fidelity
+		 
+	   ",,,http://incubator.apache.org/projects/xmlbeans.html,https://github.com/apache/XMLBeans
+252,Zeppelin,zeppelin,1,12/23/2014,5/18/2016,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","A collaborative data analytics and visualization tool for distributed, general-purpose data processing systems such as Apache Spark, Apache Flink, etc.
+		 
+	   ",,,http://incubator.apache.org/projects/zeppelin.html,https://github.com/apache/Zeppelin
+253,Agila,agila,2,9/29/2004,12/5/2006,t,t,f,"Jakarta
+		 
+	   ","Extensible Business Process Management (BPM) engine core.
+		
+		
+		Project activity transferred to another Incubator project - ODE.
+		 
+	   ",,,http://incubator.apache.org/projects/agila.html,https://github.com/apache/Agila
+254,Alois,alois,2,9/21/2010,6/30/2011,t,t,f,"Incubator
+		 
+	   ","ALOIS is a log collection and correlation software with reporting and alarming functionalities.
+		
+		
+		Podling requested to be retired
+		 
+	   ",,,http://incubator.apache.org/projects/alois.html,https://github.com/apache/Alois
+255,AltRMI,altrmi,2,2/13/2003,1/18/2007,f,f,f,"Incubator
+		 
+	   ","A transparent Remote Procedure Call bean.
+		
+		
+		Development stalled and the project activity transferred to JRemoting
+		 
+	   ",,,http://incubator.apache.org/projects/altrmi.html,https://github.com/apache/AltRMI
+256,AriaTosca,ariatosca,2,8/27/2016,7/1/2018,t,t,f,"Incubator
+		
+		(Suneel Marthi)
+		 
+	   ","ARIA TOSCA project offers an easily consumable Software Development Kit(SDK) and a Command Line Interface(CLI) to implement TOSCA(Topology and Orchestration Specification of Cloud Applications) based solutions.
+		 
+	   ",,,http://incubator.apache.org/projects/ariatosca.html,https://github.com/apache/AriaTosca
+257,AWF,awf,2,7/8/2011,9/16/2012,t,t,f,"Incubator
+		 
+	   ","
+            AWF is a non-blocking, asynchronous, event driven high performance web framework running on the JVM.
+            (Note: originally known as Deft, renamed to AWF on 2012-02-15)
+        
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/awf.html,https://github.com/apache/AWF
+258,Axion,axion,2,12/19/2003,1/23/2006,f,f,f,"DB
+		 
+	   ","Relational database engine written in Java.
+		
+		
+		Project remains at Axion Tigris.org
+		 
+	   ",,,http://incubator.apache.org/projects/axion.html,https://github.com/apache/Axion
+259,Bluesky,bluesky,2,1/12/2008,7/5/2011,t,t,f,"Incubator
+		 
+	   ","Distance learning collaboration tool
+		 
+	   ",,,http://incubator.apache.org/projects/bluesky.html,https://github.com/apache/Bluesky
+260,Blur,blur,2,7/24/2012,6/22/2017,t,t,f,"Incubator
+		
+		(Patrick Hunt)
+		 
+	   ","
+            Blur is a search platform capable of searching massive amounts of data
+            in a cloud computing environment.
+        
+		
+		
+		Retired
+		 
+	   ",,,http://incubator.apache.org/projects/blur.html,https://github.com/apache/Blur
+261,Climate Model Diagnostic Analyzer,cmda,2,5/8/2015,2/5/2017,t,t,f,"Incubator
+		
+		(Chris Mattmann)
+		 
+	   ","
+            CMDA provides web services for multi-aspect physics-based and phenomenon-oriented climate model performance evaluation and diagnosis through the comprehensive and synergistic use of multiple observational data, reanalysis data, and model outputs.
+        
+		
+		
+		Retired for lack of on list activity and primary development being outside the ASF
+		 
+	   ",,,http://incubator.apache.org/projects/cmda.html,https://github.com/apache/Climate Model Diagnostic Analyzer
+262,Composer,composer,2,10/30/2007,5/13/2008,f,t,f,"Incubator
+		 
+	   ","Embeddable IoC container
+		 
+	   ",,,http://incubator.apache.org/projects/composer.html,https://github.com/apache/Composer
+263,Concerted,concerted,2,10/14/2015,4/25/2016,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","Apache Concerted is a Do-It-Yourself toolkit for building in-memory data engines.
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/concerted.html,https://github.com/apache/Concerted
+264,Corinthia,corinthia,2,12/8/2014,11/19/2015,t,t,f,"Incubator
+		
+		(Jan Iversen)
+		 
+	   ","Corinthia is a toolkit/application for converting between and editing common office file formats, with an initial focus on word processing. It is designed to cater for multiple classes of platforms - desktop, web, and mobile - and relies heavily on web technologies such as HTML, CSS, and JavaScript for representing and manipulating documents. The toolkit is small, portable, and flexible, with minimal dependencies. The target audience is developers wishing to include office viewing, conversion, and editing functionality into their applications.
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/corinthia.html,https://github.com/apache/Corinthia
+265,Cotton,cotton,2,6/1/2015,12/1/2015,t,f,f,"Incubator
+		
+		(Jake Farrell)
+		 
+	   ","Cotton is an Apache Mesos framework for running MySQL instances. (Formerly known as Mysos)
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/cotton.html,https://github.com/apache/Cotton
+266,Depot,depot,2,12/4/2003,10/28/2004,t,t,f,"Incubator
+		 
+	   ","Integrated tools for automating downloading, publishing and managing software artifacts, along with tools for manipulating their metadata.
+		
+		
+		Project closed after development stalled.
+		 
+	   ",,,http://incubator.apache.org/projects/depot.html,https://github.com/apache/Depot
+267,Droids,droids,2,10/9/2008,11/1/2015,t,t,f,"HttpComponents, Lucene
+		 
+	   ","Droids aims to be an intelligent standalone robot framework that allows to create and extend existing droids (robots).
+		
+		
+		Retired from incubation.
+		 
+	   ",,,http://incubator.apache.org/projects/droids.html,https://github.com/apache/Droids
+268,Gearpump,gearpump,2,3/8/2016,9/19/2018,t,t,f,"Incubator
+		
+		(Andrew Purtell)
+		 
+	   ","Gearpump is a reactive real-time streaming engine based on the micro-service Actor model.
+		
+		
+		Retired
+		 
+	   ",,,http://incubator.apache.org/projects/gearpump.html,https://github.com/apache/Gearpump
+269,Gossip,gossip,2,4/28/2016,8/21/2018,t,t,f,"Incubator
+		
+		(P. Taylor Goetz)
+		 
+	   ","Gossip is an implementation of the Gossip Protocol.
+		
+		
+		Retired
+		 
+	   ",,,http://incubator.apache.org/projects/gossip.html,https://github.com/apache/Gossip
+270,Graffito,graffito,2,9/20/2004,7/11/2007,t,t,f,"Portals
+		 
+	   ","Portal oriented Content Management System (Formerly known as JCMS)
+		 
+	   ",,,http://incubator.apache.org/projects/graffito.html,https://github.com/apache/Graffito
+271,Hadoop Development Tools (HDT),hdt,2,11/9/2012,12/2/2014,t,t,f,"Incubator
+		 
+	   ","Eclipse based tools for developing applications on the Hadoop platform
+		
+		
+		Retired at request of PPMC as the project failed to grow community.
+		 
+	   ",,,http://incubator.apache.org/projects/hdt.html,https://github.com/apache/Hadoop Development Tools (HDT)
+272,Heraldry,heraldry,2,7/14/2005,6/9/2007,t,t,f,"Incubator
+		 
+	   ","Identity for the rest of us.
+		
+		
+		Project retired. Some activity moved to OpenID.net
+		 
+	   ",,,http://incubator.apache.org/projects/heraldry.html,https://github.com/apache/Heraldry
+273,HISE,hise,2,11/5/2009,2/11/2012,t,t,f,"ODE
+		 
+	   ","HISE
+		
+		
+		Retired due to inactivity.
+		 
+	   ",,,http://incubator.apache.org/projects/hise.html,https://github.com/apache/HISE
+274,HORN,horn,2,9/4/2015,7/13/2017,t,f,f,"Incubator
+		
+		(Edward J. Yoon)
+		 
+	   ","HORN is a neuron-centric programming APIs and execution framework for large-scale deep learning, built on top of Apache Hama.
+		
+		
+		Retired
+		 
+	   ",,,http://incubator.apache.org/projects/horn.html,https://github.com/apache/HORN
+275,HTrace,htrace,2,11/11/2014,4/11/2018,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","HTrace is a tracing framework intended for use with distributed systems written in java.
+		
+		
+		HTrace made several releases however energy gradually evaporated and a community retirement VOTE was held with the RESULT that HTrace be retired.
+		 
+	   ",,,http://incubator.apache.org/projects/htrace.html,https://github.com/apache/HTrace
+276,Imperius,imperius,2,11/10/2007,5/14/2011,t,t,f,"Incubator
+		 
+	   ","Rule-based Management Policy Engine
+		
+		
+		Although the Apache Imperius project was successful in building an SPL implementation and had a successful release, there is not sufficient community energy to warrant continued development of Imperius at the Apache Software Foundation.
+		 
+	   ",,,http://incubator.apache.org/projects/imperius.html,https://github.com/apache/Imperius
+277,iota,iota,2,1/20/2016,2/15/2018,t,t,f,"Incubator
+		
+		(Hadrian Zbarcea)
+		 
+	   ","Open source system that enables the orchestration of IoT devices.
+		 
+	   ",,,http://incubator.apache.org/projects/iota.html,https://github.com/apache/iota
+278,JuiCE,juice,2,4/5/2004,10/18/2007,t,t,f,"XML
+		 
+	   ","OpenSSL based JCE provider. Project going into retired status after lack of community interest.
+		 
+	   ",,,http://incubator.apache.org/projects/juice.html,https://github.com/apache/JuiCE
+279,Kabuki,kabuki,2,1/26/2006,6/24/2006,t,t,f,"Incubator
+		
+		(Sam Ruby)
+		 
+	   ","An AJAX toolkit
+		 
+	   ",,,http://incubator.apache.org/projects/kabuki.html,https://github.com/apache/Kabuki
+280,Kalumet,kalumet,2,9/20/2011,11/1/2015,t,t,f,"Incubator
+		 
+	   ","Kalumet a complete environment manager and deployer including J2EE environments (application servers, applications, etc), softwares, and resources.
+		
+		
+		Podling retired from incubation.
+		 
+	   ",,,http://incubator.apache.org/projects/kalumet.html,https://github.com/apache/Kalumet
+281,Kato,kato,2,11/6/2008,8/1/2012,t,t,f,"Incubator
+		 
+	   ","Kato is a project to develop the Specification, Reference Implementation, and TCK for JSR 326: the JVM Post-mortem Diagnostics API.
+		
+		
+		Retired due to inactivity.
+		 
+	   ",,,http://incubator.apache.org/projects/kato.html,https://github.com/apache/Kato
+282,Kitty,kitty,2,10/3/2010,10/19/2012,t,f,f,"Incubator
+		 
+	   ","Kitty is a lightweight, production focused, Java-based application server performance diagnostic and management utility.
+		
+		
+		Retired due to inactivity.
+		 
+	   ",,,http://incubator.apache.org/projects/kitty.html,https://github.com/apache/Kitty
+283,Lokahi,lokahi,2,3/1/2006,8/16/2009,t,t,f,"Incubator
+		 
+	   ","The Lokahi project will create a management console for Apache HTTP Server and Apache Tomcat projects on a framework extensible to other ASF projects.
+		
+		
+		Retired due to inactivity. Some talk of moving parts of the codebase to Tomcat.
+		 
+	   ",,,http://incubator.apache.org/projects/lokahi.html,https://github.com/apache/Lokahi
+284,Lucene4c,lucene4c,2,2/21/2005,10/15/2006,f,f,f,"Lucene
+		 
+	   ","Lucene for C.
+		
+		
+		Progress stalled as developers ran out of free time and motivation.
+		 
+	   ",,,http://incubator.apache.org/projects/lucene4c.html,https://github.com/apache/Lucene4c
+285,MRQL,mrql,2,3/13/2013,8/18/2017,t,t,f,"Incubator
+		
+		(Edward J. Yoon)
+		 
+	   ","MRQL is a query processing and optimization system for large-scale, distributed data analysis, built on top of Apache Hadoop, Hama, Spark, and Flink.
+		
+		
+		Retired.
+		 
+	   ",,,http://incubator.apache.org/projects/mrql.html,https://github.com/apache/MRQL
+286,NMaven,nmaven,2,11/17/2006,11/13/2008,t,t,f,"Maven
+		
+		(Brett Porter,Jason van Zyl)
+		 
+	   ",".NET integration for Maven. Failed to build active community.
+		
+		
+		Efforts moved to NPanday. Other similar projects are NMaven @ Codeplex (http://www.codeplex.com/nmaven/) and Byldan @ Codeplex (http://www.codeplex.com/byldan/).
+		 
+	   ",,,http://incubator.apache.org/projects/nmaven.html,https://github.com/apache/NMaven
+287,NPanday,npanday,2,8/13/2010,2/8/2015,t,t,f,"Incubator
+		 
+	   ","NPanday allows projects using the .NET framework to be built with Apache Maven.
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/npanday.html,https://github.com/apache/NPanday
+288,ODF Toolkit,odf,2,8/1/2011,11/27/2018,t,t,f,"Incubator
+		 
+	   ","Java modules that allow programmatic creation, scanning and manipulation of OpenDocument Format (ISO/IEC 26300 == ODF) documents
+		
+		
+		Retired from the ASF and moved to The Document Foundation
+		 
+	   ",,,http://incubator.apache.org/projects/odftoolkit.html,https://github.com/apache/ODF Toolkit
+289,Olio,olio,2,9/29/2008,11/16/2011,t,t,f,"Incubator
+		 
+	   ","Web 2.0 evaluation kit
+		 
+	   ",,,http://incubator.apache.org/projects/olio.html,https://github.com/apache/Olio
+290,OpenAz,openaz,2,1/20/2015,8/26/2016,t,t,f,"Incubator
+		
+		(Paul Fremantle)
+		 
+	   ","Tools and libraries for developing Attribute-based Access Control (ABAC) Systems in a variety of languages.
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/openaz.html,https://github.com/apache/OpenAz
+291,PhotArk,photark,2,8/19/2008,12/29/2012,t,t,f,"Incubator
+		 
+	   ","A Photo Gallery application, accessible via the web and written in Java
+		
+		
+		Retired due to inactivity.
+		 
+	   ",,,http://incubator.apache.org/projects/photark.html,https://github.com/apache/PhotArk
+292,Pirk,pirk,2,6/17/2016,4/17/2017,t,t,f,"Incubator
+		
+		(Billie Rinaldi)
+		 
+	   ","Pirk is a framework for scalable Private Information Retrieval (PIR).
+		
+		
+		Retired due to inactivity.
+		 
+	   ",,,http://incubator.apache.org/projects/pirk.html,https://github.com/apache/Pirk
+293,Provisionr,provisionr,2,3/7/2013,11/22/2013,t,t,f,"Incubator
+		
+		(Tom White)
+		 
+	   ","Provisionr provides a service to manage pools of virtual machines on multiple clouds.
+		
+		
+		Failed to grow a community. Retired at request of PPMC.
+		 
+	   ",,,http://incubator.apache.org/projects/provisionr.html,https://github.com/apache/Provisionr
+294,Quickstep,quickstep,2,3/29/2016,11/30/2018,t,t,f,"Incubator
+		
+		(Roman Shaposhnik)
+		 
+	   ","Quickstep is a high-performance database engine.
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/quickstep.html,https://github.com/apache/Quickstep
+295,RCF,rcf,2,4/6/2007,9/15/2009,t,t,f,"MyFaces
+		 
+	   ","JSF Component Library.
+		
+		
+		Never got started, so retired.
+		 
+	   ",,,http://incubator.apache.org/projects/rcf.html,https://github.com/apache/RCF
+296,Ripple,ripple,2,10/16/2012,12/6/2015,t,t,f,"Incubator
+		
+		(Ross Gardler)
+		 
+	   ","Ripple is a browser based mobile phone emulator designed to aid in the development of HTML5 based mobile applications.  Ripple is a cross platform and cross runtime testing/debugging tool. It currently supports such runtimes as Cordova, WebWorks aand the Mobile Web.
+		
+		
+		Retired for lack of activity
+		 
+	   ",,,http://incubator.apache.org/projects/ripple.html,https://github.com/apache/Ripple
+297,S4,s4,2,9/26/2011,6/19/2014,t,t,f,"Incubator
+		 
+	   ","S4 (Simple Scalable Streaming System) is a general-purpose, distributed, scalable, partially fault-tolerant, pluggable platform that allows programmers to easily develop applications for processing continuous, unbounded streams of data.
+		 
+	   ",,,http://incubator.apache.org/projects/s4.html,https://github.com/apache/S4
+298,Sirona,sirona,2,10/15/2013,7/3/2017,t,t,f,"Incubator
+		
+		(Olivier Lamy)
+		 
+	   ","Monitoring Solution.
+		
+		
+		Retired
+		 
+	   ",,,http://incubator.apache.org/projects/sirona.html,https://github.com/apache/Sirona
+299,Slider,slider,2,4/29/2014,5/24/2018,t,t,f,"Incubator
+		
+		(Vinod K)
+		 
+	   ","Slider is a collection of tools and technologies to package, deploy, and manage long running applications on Apache Hadoop YARN clusters.
+		
+		
+		Development of long-running service support for Apache Hadoop YARN has been moved to the hadoop-yarn-services-core module in Apache Hadoop.
+		 
+	   ",,,http://incubator.apache.org/projects/slider.html,https://github.com/apache/Slider
+300,SocialSite,socialsite,2,5/8/2009,10/17/2010,t,f,f,"Incubator
+		 
+	   ","SocialSite is an OpenSocial-based headless social networking server and a set of OpenSocial Gadgets that make it easy to add social features to existing web sites. Server provides admin console for configuration, gadget approval and management. Gadgets can be combined to form complete UI for social networking with friending, group management and message support.
+		 
+	   ",,,http://incubator.apache.org/projects/socialsite.html,https://github.com/apache/SocialSite
+301,Stonehenge,stonehenge,2,11/19/2008,7/5/2011,t,t,f,"Incubator
+		 
+	   ","Stonehenge is a set of interoperability scenarios for Service Oriented Architecture and Web Services that demonstrate interoperability between multiple systems including Apache Axis2, WSF/PHP and Microsoft WCF. The code also demonstrates good practice for standards-based interoperability.
+		
+		
+		
+            ""The Stonehenge project pretty much accomplished what it originally
+            set out to do and then really didn't find a way to transition to
+            something that is longer lasting and able to develop a community
+            around it.""
+        
+		 
+	   ",,,http://incubator.apache.org/projects/stonehenge.html,https://github.com/apache/Stonehenge
+302,Tashi,tashi,2,9/4/2008,10/2/2012,t,t,f,"Incubator
+		 
+	   ","An infrastructure for cloud computing on big data.
+		 
+	   ",,,http://incubator.apache.org/projects/tashi.html,https://github.com/apache/Tashi
+303,TripleSoup,triplesoup,2,2/5/2007,10/18/2007,t,t,f,"Incubator
+		 
+	   ","SPARQL endpoint for your webserver. Project entering retired status after failing to get traction.
+		 
+	   ",,,http://incubator.apache.org/projects/triplesoup.html,https://github.com/apache/TripleSoup
+304,TSIK,tsik,2,5/17/2005,3/21/2006,t,f,f,"Web Services
+		 
+	   ","implementations of various W3C and OASIS specifications related to XML and Web services security
+		
+		
+		Failed to gather community momentum. Cancelled at request of Sponsoring TLP.
+		 
+	   ",,,http://incubator.apache.org/projects/tsik.html,https://github.com/apache/TSIK
+305,WADI,wadi,2,12/5/2005,12/5/2005,t,t,f,"Geronimo
+		 
+	   ","a robust hetorgeneous clustering engine used to cluster geronimo, tomcat, jetty and other containers eventually.
+		
+		
+		Proposal withdrawn by creator; project continues at Codehaus.
+		 
+	   ",,,http://incubator.apache.org/projects/wadi.html,https://github.com/apache/WADI
+306,Wave,wave,2,12/4/2010,1/15/2018,t,t,f,"Incubator
+		 
+	   ","A wave is a hosted, live, concurrent data structure for rich communication. It can be used like email, chat, or a document.
+		 
+	   ",,,http://incubator.apache.org/projects/wave.html,https://github.com/apache/Wave
+307,WSRP4J,wsrp4j,2,9/3/2003,4/18/2010,t,f,f,"Portals
+		 
+	   ","Implementation of OASIS Web Services for Remote Portlets (WSRP)
+		 
+	   ",,,http://incubator.apache.org/projects/wsrp4j.html,https://github.com/apache/WSRP4J
+308,XAP,xap,2,5/22/2006,6/26/2009,t,t,f,"Incubator
+		 
+	   ","Declarative framework for building Ajax-powered web apps
+		 
+	   ",,,http://incubator.apache.org/projects/xap.html,https://github.com/apache/XAP
+309,XMLBeans/C++,xmlbeans-cxx,2,6/6/2005,5/16/2007,f,f,f,"Web Services
+		 
+	   ","C++ equivalent of Apache XMLBeans.
+		
+		
+		Failed to get traction.
+		 
+	   ",,,http://incubator.apache.org/projects/xmlbeanscxx.html,https://github.com/apache/XMLBeans/C++
+310,Yoko,yoko,2,1/31/2006,12/17/2007,t,t,f,"Geronimo
+		 
+	   ","A CORBA Server.
+		 
+	   ",,,http://incubator.apache.org/projects/yoko.html,https://github.com/apache/Yoko
+311,Zeta Components,zeta,2,5/21/2010,4/20/2012,t,t,f,"Incubator
+		 
+	   ","Zeta Components is a high-quality library of loosely-coupled PHP components.
+		 
+	   ",,,http://incubator.apache.org/projects/zetacomponents.html,https://github.com/apache/Zeta Components
+312,Zipkin,zipkin,2,8/29/2018,6/19/2019,t,t,f,"Incubator
+		
+		(Michael Semb Wever)
+		 
+	   ","Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in microservice architectures.
+		
+		
+		The podling has retired to its former community OpenZipkin (https://zipkin.io)
+		 
+	   ",,,http://incubator.apache.org/projects/zipkin.html,https://github.com/apache/Zipkin
