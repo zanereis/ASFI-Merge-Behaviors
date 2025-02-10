@@ -1,0 +1,104 @@
+# A list of github urls in lists_2019_8.csv that returned error 404 Not Found
+# determined by running: for file in *-FINAL.json ; do grep '"status":"404"' "$file" >/dev/null && echo "$file" ; done | sed -e 's/apache-//' -e 's/-FINAL\.json//'
+
+Agila
+Alois
+AltRMI
+Amber
+Apex
+Apollo
+AriaTosca
+AWF
+Axion
+Bean Validation
+Beehive
+Bluesky
+Blur
+Climate Model Diagnostic Analyzer
+CommonsRDF
+Composer
+Concerted
+Corinthia
+Cotton
+Depot
+DeviceMap
+Directory
+Droids
+EasyAnt
+Flex
+Gearpump
+Gossip
+Graffito
+Guacamole
+Hadoop Development Tools (HDT)
+Heraldry
+Hermes
+HISE
+HORN
+HTrace
+httpd-CLI
+iBATIS
+Imperius
+incubator-Marvin-AI
+incubator-PageSpeed
+incubator-Pony Mail
+incubator-SDAP
+incubator-Taverna
+incubator-Warble
+iota
+Ivy
+JaxMe
+JDO
+JuiCE
+Kabuki
+Kato
+Kitty
+log4cxx2
+log4cxx
+log4net
+Log4php
+Lokahi
+Lucene4c
+MerlinDeveloper
+mod_ftp
+MRQL
+Muse
+Mynewt
+NMaven
+ODF Toolkit
+OGNL
+Olingo
+Olio
+OpenAz
+Open Climate Workbench
+OpenOffice.org
+Parquet
+Pirk
+Provisionr
+Quickstep
+RAT
+RCF
+Ripple
+River
+S4
+ServiceComb
+Slider
+SocialSite
+Stonehenge
+Tapestry
+Tobago
+Traffic Control
+Traffic Server
+Trinidad
+TripleSoup
+TSIK
+Tuscany
+UIMA
+WADI
+Wave
+WebWork 2
+Woden
+WSRP4J
+XAP
+Yoko
+Zeta Components
