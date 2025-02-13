@@ -6,12 +6,12 @@ fi
 
 jq '.[] |
   {
-    repo: (input_filename | sub(".*/"; "") | sub("^apache-"; "") | sub("-[0-9]*\\.json$"; "")),
-    number,
+    repo: (input_filename | sub(".*/"; "") | sub("^apache-"; "") | sub("-[0-9]*\\-comments.json$"; "")),
+    id,
     user: .user.login,
     user_type: .user.type,
-    created_at, updated_at, closed_at, merged_at,
-    merge_commit_sha,
+    author_association,
+    created_at, updated_at,
     issue_url,
     body
   }
