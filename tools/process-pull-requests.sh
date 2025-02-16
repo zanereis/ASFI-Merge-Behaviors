@@ -10,6 +10,7 @@ jq '.[] |
     number,
     user: .user.login,
     user_type: .user.type,
+    state,
     created_at, updated_at, closed_at, merged_at,
     merge_commit_sha,
     issue_url,
