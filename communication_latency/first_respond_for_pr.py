@@ -86,7 +86,7 @@ with open(csv_filename, mode="w", newline="") as file:
     for repo, avg_time in project_avg_response_times.items():
         status = repo_status_dict.get(repo, "unknown")
         num_prs = len(project_response_times[repo])
-        writer.writerow([repo, status, num_prs, avg_time])
+        writer.writerow([repo, status, num_prs, f"{avg_time:.2f}"])
 
 # Generate the bar graph
 
@@ -97,9 +97,9 @@ plt.figure(figsize=(8, 5))
 plt.bar(categories, avg_latencies, color=['blue', 'orange'])
 plt.xlabel("Project Category")
 plt.ylabel("Average First Respond Time (hours)")
-plt.title("Comparison of First Respond Time")
-
-plt.show()
+plt.title("Comparison of Average First Respond Time by Project State")
+plt.savefig("first_respond_bar_plot.png", dpi=300, bbox_inches='tight')
+# plt.show()
 
 # Generate the box plot
 data = [list(graduated_projects.values()), list(retired_projects.values())]
@@ -107,10 +107,10 @@ labels = ['Graduated', 'Retired']
 
 plt.figure(figsize=(8, 5))
 plt.boxplot(data, labels=labels)
-plt.title("First Respond Time Distribution: Graduated vs Retired Projects")
+plt.title("First Respond Time Distribution by Project State")
 plt.ylabel("First Response Time (hours)")
-
-plt.show()
+plt.savefig("first_respond_box_plot.png", dpi=300, bbox_inches='tight')
+# plt.show()
 
 # Create KDE plot
 plt.figure(figsize=(8, 5))
@@ -122,11 +122,12 @@ if len(graduated_projects) > 1:  # KDE requires at least two data points
 if len(retired_projects) > 1:
     sns.kdeplot(list(retired_projects.values()), label="Retired", fill=True, color='red')
 # Add title and labels
-plt.title("KDE Plot: First Respond Time (Graduated vs Retired)")
+plt.title("KDE Plot: First Respond Time by Project State")
 plt.xlabel("Average First Respond Time (hours)")
 plt.ylabel("Density")
 plt.legend()
-plt.show()
+plt.savefig("first_respond_kde_plot.png", dpi=300, bbox_inches='tight')
+# plt.show()
 
 
 # # Generate the scatter plot

@@ -51,11 +51,12 @@ def compute_pr_stats(prs, repo_latencies):
     repo_pr_stats = {}
 
     for pr in prs:
-        if "repo" in pr:
-            repo = pr["repo"]
-            if repo not in repo_pr_stats:
-                repo_pr_stats[repo] = {"pr_count": 0, "avg_resolution": 0}
-            repo_pr_stats[repo]["pr_count"] += 1
+        if pr.get("closed_at"):
+            if "repo" in pr:
+                repo = pr["repo"]
+                if repo not in repo_pr_stats:
+                    repo_pr_stats[repo] = {"pr_count": 0, "avg_resolution": 0}
+                repo_pr_stats[repo]["pr_count"] += 1
 
     for repo, latencies in repo_latencies.items():
         if repo in repo_pr_stats:
@@ -72,13 +73,13 @@ repo_status_dict = {entry["repo"]: entry["status"] for entry in project_status_d
 
 # Load JSON data for PRs
 json_file_path = "pull-requests.json"
-json_data = load_json_file(json_file_path)
+pr_json_data = load_json_file(json_file_path)
 
 # Compute latencies while ignoring PRs with null "closed_at"
-graduated_latencies, retired_latencies, graduated_avg_latency, retired_avg_latency, repo_latencies = compute_pr_resolution_latency(json_data, repo_status_dict)
+graduated_latencies, retired_latencies, graduated_avg_latency, retired_avg_latency, repo_latencies = compute_pr_resolution_latency(pr_json_data, repo_status_dict)
 
 # Compute PR stats (number of PRs and average resolution per repo)
-repo_pr_stats = compute_pr_stats(json_data, repo_latencies)
+repo_pr_stats = compute_pr_stats(pr_json_data, repo_latencies)
 
 # # Print results
 # print("PR Resolution Latency for Graduated Projects (in Hours, Ignoring PRs with null closed_at):")
@@ -127,10 +128,10 @@ avg_latencies = [graduated_avg_latency, retired_avg_latency]
 plt.figure(figsize=(8, 5))
 plt.bar(categories, avg_latencies, color=['blue', 'orange'])
 plt.xlabel("Project Category")
-plt.ylabel("Average PR Resolution Time (hours)")
+plt.ylabel("Comparison of Average PR Resolution Time by Project State")
 plt.title("Comparison of Average PR Resolution Time")
-
-plt.show()
+plt.savefig("pr_resolution_time_bar_plot.png", dpi=300, bbox_inches='tight')
+# plt.show()
 
 
 # Generate the box plot
@@ -142,10 +143,10 @@ plt.figure(figsize=(8, 6))
 data = [graduated_resolutions, retired_resolutions]
 labels = ["Graduated Projects", "Retired Projects"]
 plt.boxplot(data, labels=labels, patch_artist=True)
-plt.ylabel("Average PR Resolution Time (Hours)")
+plt.ylabel("PR Resolution Time Distribution by Project State")
 plt.title("Box Plot of PR Resolution Times for Graduated vs Retired Projects")
-
-plt.show()
+plt.savefig("pr_resolution_time_boz_plot.png", dpi=300, bbox_inches='tight')
+# plt.show()
 
 
 # Create KDE plot
@@ -161,8 +162,8 @@ sns.kdeplot(retired_resolutions, label="Retired Projects", fill=True, alpha=0.5)
 
 plt.xlabel("Average PR Resolution Time (Hours)")
 plt.ylabel("Density")
-plt.title("KDE Plot of PR Resolution Times for Graduated vs Retired Projects")
+plt.title("KDE Plot: PR Resolution Times by Project State")
 
 plt.legend()
-
-plt.show()
+plt.savefig("pr_resolution_time_kde_plot.png", dpi=300, bbox_inches='tight')
+# plt.show()
