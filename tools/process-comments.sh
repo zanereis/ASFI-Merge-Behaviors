@@ -1,9 +1,6 @@
 #!/bin/bash
-if [ -z "$1" ]; then
-  echo "Usage: $0 directory"
-  exit 1
-fi
 
+input_directory="../data/github-comments"
 jq '.[] |
   {
     repo: (input_filename | sub(".*/"; "") | sub("^apache-"; "") | sub("-[0-9]*\\-comments.json$"; "")),
@@ -15,4 +12,4 @@ jq '.[] |
     issue_url,
     body
   }
-' "$1"/*.json | jq -s '.'
+' "$input_directory"/*.json | jq -s '.'
