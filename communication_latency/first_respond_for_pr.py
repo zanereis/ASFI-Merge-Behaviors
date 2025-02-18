@@ -2,10 +2,9 @@
 
 import json
 from datetime import datetime
-
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
-
 import csv
 
 # Load data from JSON files
@@ -43,24 +42,40 @@ for pr in pull_requests:
             project_response_times[repo_name] = []
         project_response_times[repo_name].append(response_time)
 
-# Compute average response time per project
+# Compute average and median response time per project
 project_avg_response_times = {repo: sum(times) / len(times) for repo, times in project_response_times.items()}
+project_median_response_times = {repo: sorted(times)[len(times) // 2] for repo, times in project_response_times.items()}
 
 graduated_projects = {}
 retired_projects = {}
+graduated_projects_median = {}
+retired_projects_median = {}
+
 for repo, avg_time in project_avg_response_times.items():
     status = repo_status_dict.get(repo, "unknown")
     if status == "graduated":
         graduated_projects[repo] = avg_time
+        graduated_projects_median[repo] = project_median_response_times[repo]
     elif status == "retired":
         retired_projects[repo] = avg_time
+        retired_projects_median[repo] = project_median_response_times[repo]
 
-# Compute the overall average response time for graduated and retired projects
+# Compute overall average and median response time for graduated and retired projects
 def compute_average(times):
     return sum(times) / len(times) if times else None
 
+def compute_median(times):
+    sorted_times = sorted(times)
+    n = len(sorted_times)
+    if n == 0:
+        return None
+    return sorted_times[n // 2]
+
 graduated_avg_response_time = compute_average(graduated_projects.values())
 retired_avg_response_time = compute_average(retired_projects.values())
+
+graduated_median_response_time = compute_median(graduated_projects_median.values())
+retired_median_response_time = compute_median(retired_projects_median.values())
 
 print("Average First Response Time per Project:")
 for repo, avg_time in project_avg_response_times.items():
@@ -77,28 +92,27 @@ for repo, avg_time in retired_projects.items():
 print(f'\nOverall Graduated Projects - Average First Response Time: {graduated_avg_response_time:.2f} hours' if graduated_avg_response_time else 'No data for graduated projects.')
 print(f'Overall Retired Projects - Average First Response Time: {retired_avg_response_time:.2f} hours' if retired_avg_response_time else 'No data for retired projects.')
 
-# Prepare data for CSV
-csv_filename = "first_response_times.csv"
-with open(csv_filename, mode="w", newline="") as file:
-    writer = csv.writer(file)
-    writer.writerow(["Repository Name", "Status", "Number of PRs", "Average First Response Time (hours)"])
-    
-    for repo, avg_time in project_avg_response_times.items():
-        status = repo_status_dict.get(repo, "unknown")
-        num_prs = len(project_response_times[repo])
-        writer.writerow([repo, status, num_prs, f"{avg_time:.2f}"])
+print(f'\nOverall Graduated Projects - Median First Response Time: {graduated_median_response_time:.2f} hours' if graduated_median_response_time else 'No data for graduated projects.')
+print(f'Overall Retired Projects - Median First Response Time: {retired_median_response_time:.2f} hours' if retired_median_response_time else 'No data for retired projects.')
 
-# Generate the bar graph
+# Generate the bar graph for both average and median response times
 
 categories = ["Graduated Projects", "Retired Projects"]
 avg_latencies = [graduated_avg_response_time, retired_avg_response_time]
-
+median_latencies = [graduated_median_response_time, retired_median_response_time]
+x = np.arange(len(categories))  # label locations
+width = 0.4  # width of the bars
 plt.figure(figsize=(8, 5))
-plt.bar(categories, avg_latencies, color=['blue', 'orange'])
+plt.bar(x - width/2, avg_latencies, width, label="Average", color='blue')
+plt.bar(x + width/2, median_latencies, width, label="Median", color='orange')
+
 plt.xlabel("Project Category")
-plt.ylabel("Average First Respond Time (hours)")
-plt.title("Comparison of Average First Respond Time by Project State")
-plt.savefig("first_respond_bar_plot.png", dpi=300, bbox_inches='tight')
+plt.ylabel("First Response Time (hours)")
+plt.title("Comparison of First Response Time by Project State")
+plt.xticks(ticks=x, labels=categories)
+plt.legend()
+plt.savefig("first_respond_avg_median_plot.png", dpi=300, bbox_inches='tight')
+
 # plt.show()
 
 # Generate the box plot
@@ -128,6 +142,17 @@ plt.ylabel("Density")
 plt.legend()
 plt.savefig("first_respond_kde_plot.png", dpi=300, bbox_inches='tight')
 # plt.show()
+
+# Prepare data for CSV
+csv_filename = "first_response_times.csv"
+with open(csv_filename, mode="w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Repository Name", "Status", "Number of PRs", "Average First Response Time (hours)", "Median First Response Time (hours)"])
+    
+    for repo, avg_time in project_avg_response_times.items():
+        status = repo_status_dict.get(repo, "unknown")
+        num_prs = len(project_response_times[repo])
+        writer.writerow([repo, status, num_prs, f"{avg_time:.2f}", f"{project_median_response_times[repo]:.2f}"])
 
 
 # # Generate the scatter plot

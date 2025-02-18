@@ -3,6 +3,7 @@
 import json
 from datetime import datetime
 from collections import defaultdict
+import statistics
 
 from matplotlib import pyplot as plt
 import seaborn as sns
@@ -55,12 +56,13 @@ def compute_pr_stats(prs, repo_latencies):
             if "repo" in pr:
                 repo = pr["repo"]
                 if repo not in repo_pr_stats:
-                    repo_pr_stats[repo] = {"pr_count": 0, "avg_resolution": 0}
+                    repo_pr_stats[repo] = {"pr_count": 0, "avg_resolution": 0, "median_resolution": 0}
                 repo_pr_stats[repo]["pr_count"] += 1
 
     for repo, latencies in repo_latencies.items():
         if repo in repo_pr_stats:
             repo_pr_stats[repo]["avg_resolution"] = sum(latencies) / len(latencies) if latencies else 0
+            repo_pr_stats[repo]["median_resolution"] = statistics.median(latencies) if latencies else 0
 
     return repo_pr_stats
 
@@ -98,11 +100,11 @@ print(f"Average PR Resolution Latency for Retired Projects: {retired_avg_latency
 # Function to generate CSV file
 with open("pr_resolution_time.csv", mode="w", newline="", encoding="utf-8") as file:
     writer = csv.writer(file)
-    writer.writerow(["Repository Name", "Status", "Number of PRs", "Average Resolution Time (hours)"])
+    writer.writerow(["Repository Name", "Status", "Number of PRs", "Average Resolution Time (hours)", "Median Resolution Time (hours)"])
     
     for repo, stats in repo_pr_stats.items():
         status = repo_status_dict.get(repo, "unknown")
-        writer.writerow([repo, status, stats["pr_count"], round(stats["avg_resolution"], 2)])
+        writer.writerow([repo, status, stats["pr_count"], round(stats["avg_resolution"], 2), round(stats["median_resolution"], 2)])
 
 
 
@@ -120,17 +122,37 @@ print("\nRetired Projects - PR Stats:")
 for repo, stats in retired_repos.items():
     print(f"Repo: {repo} | PR Count: {stats['pr_count']} | Avg Resolution: {stats['avg_resolution']:.2f} hours")
 
-# Generate the bar graph
+# Compute median resolution times
+def compute_median(latencies):
+    if not latencies:
+        return 0
+    sorted_latencies = sorted(latencies)
+    n = len(sorted_latencies)
+    mid = n // 2
+    return (sorted_latencies[mid] if n % 2 != 0 else (sorted_latencies[mid - 1] + sorted_latencies[mid]) / 2)
 
+graduated_median_latency = compute_median([lat[2] for lat in graduated_latencies])
+retired_median_latency = compute_median([lat[2] for lat in retired_latencies])
+
+print(f"Median PR Resolution Latency for Graduated Projects: {graduated_median_latency:.2f} hours")
+print(f"Median PR Resolution Latency for Retired Projects: {retired_median_latency:.2f} hours\n")
+
+# Plot comparison of Average and Median PR Resolution Time
 categories = ["Graduated Projects", "Retired Projects"]
 avg_latencies = [graduated_avg_latency, retired_avg_latency]
+median_latencies = [graduated_median_latency, retired_median_latency]
 
 plt.figure(figsize=(8, 5))
-plt.bar(categories, avg_latencies, color=['blue', 'orange'])
+x = range(len(categories))
+plt.bar(x, avg_latencies, width=0.4, label="Average", color="blue", align="center")
+plt.bar(x, median_latencies, width=0.4, label="Median", color="orange", align="edge")
+
 plt.xlabel("Project Category")
-plt.ylabel("Comparison of Average PR Resolution Time by Project State")
-plt.title("Comparison of Average PR Resolution Time")
-plt.savefig("pr_resolution_time_bar_plot.png", dpi=300, bbox_inches='tight')
+plt.ylabel("PR Resolution Time (hours)")
+plt.title("Comparison of Average and Median PR Resolution Time by Project State")
+plt.xticks(x, categories)
+plt.legend()
+plt.savefig("pr_resolution_time_avg_median_plot.png", dpi=300, bbox_inches='tight')
 # plt.show()
 
 
