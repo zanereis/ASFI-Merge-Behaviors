@@ -11,12 +11,16 @@ See more data about the response here:
 
 https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28
 
+`404-not-found.txt` contains a list of github urls in `lists_2019_8.csv` that returned error 404 Not Found. 
+This was determined by running:
 
-Notably, this response contains:
+```sh
+for file in *-FINAL.json ; do grep '"status":"404"' "$file" >/dev/null && echo "$file" ; done | sed -e 's/apache-//' -e 's/-FINAL\.json//'
+```
 
- - The user who created the pull request
- - The pull request body
- - The number of comments
- - The number of "review comments"
- - A link to an api url that returns the comments on the pull request
+`not-404-not-found.txt` contains a list of github urls in `lists_2019_8.csv` that did not produce an error 404 Not Found. 
+This was determined by running:
 
+```sh
+for file in *-FINAL.json ; do grep '^\[\]$' "$file" >/dev/null && echo "$file" ; done | sed -e 's/apache-//' -e 's/-FINAL\.json//'
+```
