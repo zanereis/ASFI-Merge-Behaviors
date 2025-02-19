@@ -3,26 +3,30 @@ import ijson
 import csv
 from collections import defaultdict
 
-def read_csv_status(csv_filename):
+def read_json_status(json_filename):
     status_data = {}
+    status_mapping = {"incubating": 0, "graduated": 1, "retired": 2}
     try:
-        with open(csv_filename, 'r', encoding='utf-8-sig', errors='replace') as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                listname = row.get("listname")
-                status = row.get("status")
-                if listname:
-                    status_data[listname] = status
+        with open(json_filename, 'r', encoding='utf-8') as jsonfile:
+            projects = json.load(jsonfile)
+            for project in projects:
+                repo = project.get("repo")
+                status = project.get("status")
+                if repo and status in status_mapping:
+                    status_data[repo] = status_mapping[status]
+                    if "-" in repo:
+                        repo_suffix = repo.split("-", 1)[1]
+                        status_data[repo_suffix] = status_mapping[status]
     except Exception as e:
-        print(f"Error reading CSV: {e}")
+        print(f"Error reading JSON: {e}")
     return status_data
 
-def process_large_json(input_filename, output_filename, csv_filename, csv_output_filename):
+def process_large_json(input_filename, output_filename, json_filename, csv_output_filename):
     project_data = defaultdict(lambda: {"users": defaultdict(lambda: {"merged_prs": 0, "closed_prs": 0, "unresolved_prs": 0}),
                                         "project_stats": {"total_prs": 0, "merged_prs": 0, "closed_prs": 0, "unresolved_prs": 0},
                                         "status": None})
     
-    status_data = read_csv_status(csv_filename)
+    status_data = read_json_status(json_filename)
     
     try:
         with open(input_filename, 'r', encoding='utf-8') as infile:
@@ -65,7 +69,7 @@ def write_csv_summary(project_data, csv_output_filename):
     try:
         with open(csv_output_filename, 'w', encoding='utf-8', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow(["Project Name", "Project State", "Number of Users", "Total PRs", "Merged PRs", "Closed PRs", "Unresolved PRs", "PR Merge %", "PR Reject %"])
+            writer.writerow(["Project Name", "Project State", "Number of Users", "Total PRs", "Merged PRs", "Closed PRs", "Unresolved PRs", "PR Merge %", "PR Reject %", "Merge to Reject Ratio"])
             
             for project, data in project_data.items():
                 status = data["status"]
@@ -77,15 +81,17 @@ def write_csv_summary(project_data, csv_output_filename):
                 
                 merge_percentage = (merged_prs / total_prs * 100) if total_prs > 0 else 0
                 reject_percentage = (closed_prs / total_prs * 100) if total_prs > 0 else 0
+                merge_to_reject_ratio = (merged_prs / closed_prs) if closed_prs > 0 else "N/A"
                 
-                writer.writerow([project, status, num_users, total_prs, merged_prs, closed_prs, unresolved_prs, f"{merge_percentage:.2f}", f"{reject_percentage:.2f}"])
+                writer.writerow([project, status, num_users, total_prs, merged_prs, closed_prs, unresolved_prs, f"{merge_percentage:.2f}", f"{reject_percentage:.2f}", merge_to_reject_ratio])
         print(f"CSV summary saved to {csv_output_filename}")
     except Exception as e:
         print(f"Error writing CSV summary: {e}")
 
+
 # Example usage
 input_file = "pull-requests.json"  # Change to your actual file name
 output_file = "processed_pr_data.json"
-csv_file = "lists_2019_8.csv"  # Change to your actual CSV file name
+json_file = "project-status.json"  # Change to your actual JSON file name
 csv_output_file = "pr_summary.csv"
-process_large_json(input_file, output_file, csv_file, csv_output_file)
+process_large_json(input_file, output_file, json_file, csv_output_file)
