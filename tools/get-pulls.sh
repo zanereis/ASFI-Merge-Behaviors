@@ -11,11 +11,15 @@ get-pulls() {
 	gh api --method GET "https://api.github.com/repos/${owner}/${repo}/pulls?state=all&per_page=100&page=$i" --header "Accept: application/vnd.github+json"
 }
 
+owner="$1"
+repo="$2"
+dir="$3"
+
+echo "Fetching pull requests from ${owner}/${repo}"
+
 while true; do
 	((i++))
-	owner="$1"
-	repo="$2"
-	dir="$3"
+	echo $i
 	output=$(get-pulls 2>/dev/null | tee "$dir"/"${owner}-${repo}-${i}.json")
 	status=$?
 

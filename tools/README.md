@@ -1,1 +1,1 @@
-This directory contains tools for retrieving pull request information. See the release/ directory or the [Releases](https://github.com/zanereis/ASFI-Merge-Behaviors/releases) page on github for pre-formatted data.
+This directory contains tools for retrieving pull request information.

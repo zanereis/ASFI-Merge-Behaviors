@@ -4,3 +4,5 @@ core_developers/comments.csv
 core_developers/pull-requests.csv
 gitssh
 gitssh.pub
+release/*.csv
+release/*.json

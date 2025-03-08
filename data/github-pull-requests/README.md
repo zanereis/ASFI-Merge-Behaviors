@@ -17,10 +17,3 @@ This was determined by running:
 ```sh
 for file in *-FINAL.json ; do grep '"status":"404"' "$file" >/dev/null && echo "$file" ; done | sed -e 's/apache-//' -e 's/-FINAL\.json//'
 ```
-
-`not-404-not-found.txt` contains a list of github urls in `lists_2019_8.csv` that did not produce an error 404 Not Found. 
-This was determined by running:
-
-```sh
-for file in *-FINAL.json ; do grep '^\[\]$' "$file" >/dev/null && echo "$file" ; done | sed -e 's/apache-//' -e 's/-FINAL\.json//'
-```
