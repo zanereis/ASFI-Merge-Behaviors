@@ -19,6 +19,8 @@ echo "Fetching issue comments from ${owner}/${repo}"
 
 while true; do
 	((i++))
+	echo "$i"
+
 	output=$(get-pulls 2>/dev/null | tee "$dir"/"${owner}-${repo}-${i}-comments.json")
 	status=$?
 

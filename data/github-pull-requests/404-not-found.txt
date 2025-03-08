@@ -1,6 +1,3 @@
-# A list of github urls in lists_2019_8.csv that returned error 404 Not Found
-# determined by running: for file in *-FINAL.json ; do grep '"status":"404"' "$file" >/dev/null && echo "$file" ; done | sed -e 's/apache-//' -e 's/-FINAL\.json//'
-
 Agila
 Alois
 AltRMI

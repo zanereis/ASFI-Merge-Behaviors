@@ -1,0 +1,60 @@
+listid,listname,pj_github_url,status,multiple github repos
+135,JDO,https://github.com/apache/db-jdo,1,
+149,log4cxx,https://github.com/apache/logging-log4cxx,1,
+151,log4net,https://github.com/apache/logging-log4net,1,
+152,Log4php,https://github.com/apache/logging-log4php,1,
+285,MRQL,https://github.com/apache/incubator-retired-mrql,2,
+167,Mynewt,https://github.com/apache/mynewt-core,1,x
+288,ODF Toolkit,https://github.com/apache/odftoolkit,2,
+174,OGNL,https://github.com/apache/commons-ognl,1,
+175,Olingo,https://github.com/apache/olingo-odata4,1,x
+290,OpenAz,https://github.com/apache/incubator-retired-openaz,2,
+179,Open Climate Workbench,https://github.com/apache/climate,1,
+184,OpenOffice.org,https://github.com/apache/openoffice,1,x
+187,Parquet,https://github.com/apache/parquet-java,1,
+292,Pirk,https://github.com/apache/incubator-retired-pirk,2,
+293,Provisionr,https://github.com/apache/incubator-retired-provisionr,2,
+294,Quickstep,https://github.com/apache/incubator-retired-quickstep,2,
+198,RAT,https://github.com/apache/creadur-rat,1,
+296,Ripple,https://github.com/apache/incubator-retired-ripple,2,
+201,River,https://github.com/apache/river-container,1,
+297,S4,https://github.com/apache/incubator-retired-s4,2,
+207,ServiceComb,https://github.com/apache/servicecomb-java-chassis,1,
+299,Slider,https://github.com/apache/incubator-retired-slider,2,
+228,Tapestry,https://github.com/apache/tapestry-5,1,
+233,Tobago,https://github.com/apache/myfaces-tobago,1,
+234,Traffic Control,https://github.com/apache/trafficcontrol,1,
+235,Traffic Server,https://github.com/apache/trafficserver,1,
+237,Trinidad,https://github.com/apache/myfaces-trinidad,1,
+238,Tuscany,https://github.com/apache/tuscany-sca-2.x,1,
+240,UIMA,https://github.com/apache/uima-uimaj,1,x
+306,Wave,https://github.com/apache/incubator-retired-wave,2,
+310,Yoko,https://github.com/apache/geronimo-yoko,2,
+311,Zeta Components,https://github.com/apache/zetacomponents,2,
+59,Apex,https://github.com/apache/apex-core,1,
+60,Apollo,https://github.com/apache/activemq-apollo,1,
+256,AriaTosca,https://github.com/apache/incubator-ariatosca,2,
+66,Bean Validation,https://github.com/apache/bval,1,
+260,Blur,https://github.com/apache/incubator-retired-blur,2,
+262,"Composer",https://github.com/apache/openwhisk-composer,2,
+263,Concerted,https://github.com/apache/incubator-retired-concerted,2,
+264,Corinthia,https://github.com/apache/incubator-retired-corinthia,2,
+265,"Cotton",https://github.com/apache/incubator-retired-cotton,2,
+93,"DeviceMap",https://github.com/apache/devicemap-browsermap,1,
+95,Directory,https://github.com/apache/directory-server,1,
+100,EasyAnt,https://github.com/apache/ant-easyant-core,1,
+107,Flex,https://github.com/apache/flex-sdk,1,x
+268,Gearpump,https://github.com/apache/incubator-retired-gearpump,2,
+269,Gossip,https://github.com/apache/incubator-retired-gossip,2,x
+119,Guacamole,https://github.com/apache/guacamole-client,1,
+271,Hadoop Development Tools (HDT),https://github.com/apache/incubator-retired-hdt,2,
+274,HORN,https://github.com/apache/incubator-retired-horn,2,
+275,HTrace,https://github.com/apache/incubator-retired-htrace,2,
+126,httpd-CLI,incubator project merged into larger project,1,
+22,Marvin-AI,https://github.com/apache/incubator-marvin,0,
+28,PageSpeed,https://github.com/apache/incubator-pagespeed-ngx,0,
+30,Pony Mail,https://github.com/apache/incubator-ponymail,0,
+277,iota,https://github.com/apache/incubator-retired-iota,2,
+131,Ivy,https://github.com/apache/ant-ivy,1,
+41,Taverna,https://github.com/apache/incubator-taverna-engine,0,x
+47,Warble,https://github.com/apache/incubator-warble-server,0,
