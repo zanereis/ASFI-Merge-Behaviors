@@ -3,6 +3,7 @@ import ijson
 import csv
 from collections import defaultdict
 
+list_id = {}
 def read_json_status(json_filename):
     status_data = {}
     status_mapping = {"incubating": 0, "graduated": 1, "retired": 2}
@@ -12,11 +13,14 @@ def read_json_status(json_filename):
             for project in projects:
                 repo = project.get("repo")
                 status = project.get("status")
+                listid = project.get("listid")
                 if repo and status in status_mapping:
                     status_data[repo] = status_mapping[status]
+                    list_id[repo] = listid
                     if "-" in repo:
                         repo_suffix = repo.split("-", 1)[1]
                         status_data[repo_suffix] = status_mapping[status]
+                        list_id[repo_suffix] = listid
     except Exception as e:
         print(f"Error reading JSON: {e}")
     return status_data
@@ -41,10 +45,13 @@ def process_large_json(input_filename, output_filename, json_filename, csv_outpu
                 
                 # Assign status, handling cases where repo might have a prefix
                 status = status_data.get(repo)
+                listid = list_id.get(repo)
                 if not status and "-" in repo:
                     repo_suffix = repo.split("-", 1)[1]
                     status = status_data.get(repo_suffix)
+                    listid = list_id.get(repo_suffix)
                 project_data[repo]["status"] = status
+                project_data[repo]["listid"] = listid
                 
                 if state == "open":
                     project_data[repo]["users"][user]["unresolved_prs"] += 1
@@ -69,10 +76,11 @@ def write_csv_summary(project_data, csv_output_filename):
     try:
         with open(csv_output_filename, 'w', encoding='utf-8', newline='') as csvfile:
             writer = csv.writer(csvfile)
-            writer.writerow(["Project Name", "Project State", "Number of Users", "Total PRs", "Merged PRs", "Closed PRs", "Unresolved PRs", "PR Merge %", "PR Reject %", "Merge to Reject Ratio"])
+            writer.writerow(["Project Name", "List Id", "Project State", "Number of Users", "Total PRs", "Merged PRs", "Closed PRs", "Unresolved PRs", "PR Merge %", "PR Reject %", "Merge to Reject Ratio"])
             
             for project, data in project_data.items():
                 status = data["status"]
+                listid = data["listid"]
                 num_users = len(data["users"])
                 total_prs = data["project_stats"]["total_prs"]
                 merged_prs = data["project_stats"]["merged_prs"]
@@ -83,7 +91,7 @@ def write_csv_summary(project_data, csv_output_filename):
                 reject_percentage = (closed_prs / total_prs * 100) if total_prs > 0 else 0
                 merge_to_reject_ratio = (merged_prs / closed_prs) if closed_prs > 0 else "N/A"
                 
-                writer.writerow([project, status, num_users, total_prs, merged_prs, closed_prs, unresolved_prs, f"{merge_percentage:.2f}", f"{reject_percentage:.2f}", merge_to_reject_ratio])
+                writer.writerow([project, listid, status, num_users, total_prs, merged_prs, closed_prs, unresolved_prs, f"{merge_percentage:.2f}", f"{reject_percentage:.2f}", merge_to_reject_ratio])
         print(f"CSV summary saved to {csv_output_filename}")
     except Exception as e:
         print(f"Error writing CSV summary: {e}")
