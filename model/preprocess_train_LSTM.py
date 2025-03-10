@@ -10,6 +10,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.utils.class_weight import compute_class_weight
 
+# Remove outliers using IQR before normalization
+def remove_outliers(df, features):
+    for feature in features:
+        upper_bound = df[feature].quantile(0.95)  # 95th percentile
+            
+        # Remove values above the 95th percentile
+        df = df[(df[feature] >= 0) & (df[feature] <= upper_bound)]
+    return df
+
 # Load JSON data
 file_path = "data/monthly_data/monthly_data.json"  # Change to the correct path
 with open(file_path, "r") as file:
@@ -48,6 +57,7 @@ numeric_features = [
     "avg_time_to_rejection"
 ]
 
+
 # Normalize features by active devs
 df["active_devs"] = df["active_devs"].replace(0, np.nan)  # Avoid division by zero
 for feature in numeric_features:
@@ -58,6 +68,9 @@ df[numeric_features] = df[numeric_features].fillna(0)
 
 # Drop active devs
 df = df.drop(columns=["active_devs"])
+
+# Apply outlier removal before normalization
+df = remove_outliers(df, numeric_features)
 
 # Normalize the numeric features
 scaler = MinMaxScaler()
@@ -146,7 +159,7 @@ model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"]
 # Define early stopping
 early_stopping = EarlyStopping(
     monitor='val_loss',  # Metric to monitor
-    patience=2,          # Number of epochs to wait for improvement
+    patience=5,          # Number of epochs to wait for improvement
     restore_best_weights=True  # Restore the best weights after stopping
 )
 
