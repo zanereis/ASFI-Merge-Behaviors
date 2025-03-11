@@ -9,6 +9,9 @@ def load_json(filename):
     with open(filename, 'r') as f:
         return json.load(f)
 
+def month_of(time):
+    return time.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+
 def main():
     projects = load_json('../../release/project-status.json')
     pull_requests = load_json('../../release/pull-requests.json')
@@ -108,8 +111,8 @@ def main():
     for pr in pull_requests:
         created_at = datetime.strptime(pr["created_at"], "%Y-%m-%dT%H:%M:%SZ")
         closed_at = datetime.strptime(pr["closed_at"], "%Y-%m-%dT%H:%M:%SZ") if pr["closed_at"] else final_month[pr["repo"]]
-        month = created_at.replace(day=1)  # Start when the PR is created
-        last_month = closed_at.replace(day=1) # End when the PR is closed
+        month = month_of(created_at)  # Start when the PR is created
+        last_month = month_of(closed_at) # End when the PR is closed
         while month < last_month: # Loop from the first month to the last month
             month_key = month.strftime("%Y-%m")
             pr_unresolved[(pr["repo"], month_key)] += 1
@@ -131,8 +134,8 @@ def main():
         for i in range(1, len(events)):
             # get when the comment is created
             created_at = datetime.strptime(events[i][0], "%Y-%m-%dT%H:%M:%SZ")
-            month = created_at.replace(day=1)  # Start when the comment is created
-            last_month = closed_at.replace(day=1) # End when the comment is no longer visible (the issue is closed)
+            month = month_of(created_at)  # Start when the comment is created
+            last_month = month_of(closed_at) # End when the comment is no longer visible (the issue is closed)
             while month <= last_month:
                 month_key = month.strftime("%Y-%m")
                 comment_open[(repo, month_key)] += 1
