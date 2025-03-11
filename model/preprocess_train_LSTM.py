@@ -5,6 +5,7 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.layers import Input
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
@@ -69,8 +70,8 @@ df[numeric_features] = df[numeric_features].fillna(0)
 # Drop active devs
 df = df.drop(columns=["active_devs"])
 
-# Apply outlier removal before normalization
-df = remove_outliers(df, numeric_features)
+# # Apply outlier removal before normalization
+#df = remove_outliers(df, numeric_features)
 
 # Normalize the numeric features
 scaler = MinMaxScaler()
@@ -86,18 +87,16 @@ df = df.sort_values(by=["repo", "month"])
 # Group data by project
 grouped_data = df.groupby("repo")
 
-# Convert each project's data into sequences for LSTM
-sequence_length = 12  # Using past 12 months for prediction
+# Convert each month's data into a single sequence (no rolling window)
 X, y = [], []
 
 for _, group in grouped_data:
-    if len(group) > sequence_length:
-        for i in range(len(group) - sequence_length):
-            X.append(group.iloc[i : i + sequence_length][numeric_features].values)
-            y.append(group.iloc[i + sequence_length]["status"])
+    for i in range(len(group)):  # Each month is a separate sequence
+        X.append(group.iloc[i][numeric_features].values)  # Single month's feature values
+        y.append(group.iloc[i]["status"])  # Corresponding label
 
 # Convert lists to numpy arrays
-X = np.array(X)
+X = np.array(X).reshape(-1, 1, len(numeric_features))  # Reshape for LSTM (samples, time step = 1, features)
 y = np.array(y)
 
 graduated_sequences = np.sum(y == 1)
@@ -120,7 +119,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_
 X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.1, random_state=42)
 
 # Compute class weights
-class_weights = compute_class_weight(class_weight="balanced", classes=np.unique(y_train), y=y_train)
+class_weights = compute_class_weight(class_weight="balanced", classes=np.unique(y_train), y=y_train.ravel())
 class_weight_dict = {0: class_weights[0], 1: class_weights[1]}
 
 # Print computed class weights
@@ -145,12 +144,13 @@ print(f"Computed Class Weights: {class_weight_dict}")
 
 # Define the LSTM model
 model = Sequential([
-    LSTM(50, return_sequences=True, input_shape=(sequence_length, len(numeric_features))),
+    Input(shape=(1, len(numeric_features))),  # Explicit input layer
+    LSTM(50, return_sequences=True),
     Dropout(0.2),
-    LSTM(50),
+    LSTM(50, return_sequences=False),
     Dropout(0.2),
     Dense(25, activation="relu"),
-    Dense(1, activation="sigmoid")  # Binary classification (graduated or retired)
+    Dense(1, activation="sigmoid")
 ])
 
 # Compile the model
@@ -159,9 +159,18 @@ model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"]
 # Define early stopping
 early_stopping = EarlyStopping(
     monitor='val_loss',  # Metric to monitor
-    patience=5,          # Number of epochs to wait for improvement
+    patience=10,          # Number of epochs to wait for improvement
     restore_best_weights=True  # Restore the best weights after stopping
 )
+
+# Ensure data types are correct
+X_train = X_train.astype("float32")
+X_val = X_val.astype("float32")
+X_test = X_test.astype("float32")
+
+y_train = y_train.astype("int32")
+y_val = y_val.astype("int32")
+y_test = y_test.astype("int32")
 
 # Train the model with early stopping and class weights
 model.fit(
@@ -184,7 +193,7 @@ print(f"Test Accuracy: {accuracy:.4f}")
 # F1-score: A balance of Precision and Recall.
 # Support: number of actual instances of each class in the test dataset
 y_pred_prob = model.predict(X_test)
-y_pred = (y_pred_prob > 0.5).astype(int)  # Convert probabilities to binary (0 or 1)
+y_pred = (y_pred_prob.astype("float32") > 0.5).astype(int)  # Convert probabilities to binary (0 or 1)
 
 # Compute overall accuracy
 overall_accuracy = accuracy_score(y_test, y_pred)
