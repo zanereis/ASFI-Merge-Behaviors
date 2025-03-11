@@ -27,6 +27,7 @@ def main():
     issue_data = defaultdict(list)
     issue_closed_at = {}
     active_users_per_month = defaultdict(set)
+    active_users = defaultdict(set)
     pr_accepted = defaultdict(int)
     pr_rejected = defaultdict(int)
     pr_new = defaultdict(int)
@@ -41,6 +42,7 @@ def main():
         created_at = datetime.strptime(pr["created_at"], "%Y-%m-%dT%H:%M:%SZ")
         month_key = created_at.strftime("%Y-%m")
         active_users_per_month[(pr["repo"], month_key)].add(pr["user"])
+        active_users[pr["repo"]].add(pr["user"])
         pr_new[(pr["repo"], month_key)] += 1
         
         # Count merged PRs
@@ -68,6 +70,7 @@ def main():
         created_at = datetime.strptime(cm["created_at"], "%Y-%m-%dT%H:%M:%SZ")
         month_key = created_at.strftime("%Y-%m")
         active_users_per_month[(cm["repo"], month_key)].add(cm["user"])
+        active_users[cm["repo"]].add(cm["user"])
         comment_new[(cm["repo"], month_key)] += 1
 
     print("processing comment latencies");
@@ -168,9 +171,10 @@ def main():
                 "repo": repo,
                 "status": status,
                 "month": month,
-                "response_time": avg_response_time,
-                "first_response_time": avg_first_response_time,
+                "avg_response_time": avg_response_time,
+                "avg_first_response_time": avg_first_response_time,
                 "active_devs": len(active_users_per_month.get((repo, month), [])),
+                "total_active_devs": len(active_users.get(repo, [])),
                 "accepted_prs": accepted_prs,
                 "avg_time_to_acceptance": avg_accept_time,
                 "rejected_prs": rejected_prs,
