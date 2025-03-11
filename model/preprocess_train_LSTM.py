@@ -6,6 +6,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.layers import Input
+from tensorflow.keras.optimizers import Adam
 from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
@@ -68,9 +69,10 @@ for feature in numeric_features:
 df[numeric_features] = df[numeric_features].fillna(0)
 
 # Drop active devs
-df = df.drop(columns=["active_devs"])
+# df = df.drop(columns=["active_devs"])
 
-# # Apply outlier removal before normalization
+# Apply outlier removal before normalization
+# not removing the outliers seem to yield better accuracy
 #df = remove_outliers(df, numeric_features)
 
 # Normalize the numeric features
@@ -115,8 +117,8 @@ print(f"Total Retired Sequences: {retired_sequences}")
 # print(f"Total Sequences After Conversion: {len(y)}")
 
 # Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
-X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.1, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=42)
+X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.15, random_state=42)
 
 # Compute class weights
 class_weights = compute_class_weight(class_weight="balanced", classes=np.unique(y_train), y=y_train.ravel())
@@ -145,21 +147,24 @@ print(f"Computed Class Weights: {class_weight_dict}")
 # Define the LSTM model
 model = Sequential([
     Input(shape=(1, len(numeric_features))),  # Explicit input layer
-    LSTM(50, return_sequences=True),
+    LSTM(64, return_sequences=True),
     Dropout(0.2),
-    LSTM(50, return_sequences=False),
+    LSTM(64),
     Dropout(0.2),
     Dense(25, activation="relu"),
     Dense(1, activation="sigmoid")
 ])
 
+# Define an optimizer with a specific learning rate
+optimizer = Adam(learning_rate=0.000005)  # Default is 0.001
+
 # Compile the model
-model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
+model.compile(optimizer=optimizer, loss="binary_crossentropy", metrics=["accuracy"])
 
 # Define early stopping
 early_stopping = EarlyStopping(
     monitor='val_loss',  # Metric to monitor
-    patience=10,          # Number of epochs to wait for improvement
+    patience=3,          # Number of epochs to wait for improvement
     restore_best_weights=True  # Restore the best weights after stopping
 )
 
