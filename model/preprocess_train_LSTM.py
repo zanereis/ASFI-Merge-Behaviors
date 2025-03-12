@@ -1,6 +1,8 @@
 import json
 import pandas as pd
 import numpy as np
+import shap
+import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
@@ -54,22 +56,22 @@ total_records = len(df)
 
 # Select relevant numerical features for LSTM
 numeric_features = [
-    "accepted_prs", "rejected_prs", "unresolved_prs",
-    "new_prs", "new_comments", "avg_thread_length", "avg_time_to_acceptance",
-    "avg_time_to_rejection"
+    "avg_response_time", "avg_first_response_time", "active_devs",
+    "accepted_prs", "avg_time_to_acceptance", "rejected_prs",
+    "avg_time_to_rejection", "unresolved_prs",  "avg_thread_length", "new_prs", "new_comments"
 ]
 
 
 # Normalize features by active devs
-df["active_devs"] = df["active_devs"].replace(0, np.nan)  # Avoid division by zero
+df["total_active_devs"] = df["total_active_devs"].replace(0, np.nan)  # Avoid division by zero
 for feature in numeric_features:
-    df[feature] = df[feature] / df["active_devs"]  # Divide by active devs
+    df[feature] = df[feature] / df["total_active_devs"]  # Divide by active devs
 
 # Fill NaN values with 0 (assuming missing values indicate inactivity)
 df[numeric_features] = df[numeric_features].fillna(0)
 
-# Drop active devs
-# df = df.drop(columns=["active_devs"])
+# Drop total active devs
+df = df.drop(columns=["total_active_devs"])
 
 # Apply outlier removal before normalization
 # not removing the outliers seem to yield better accuracy
@@ -211,3 +213,28 @@ print("\nClassification Report:\n", report)
 # Compute confusion matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("\nConfusion Matrix:\n", conf_matrix)
+
+
+# *********************************************
+# Using SHAP to interpret the prediction of the model
+# Ensure SHAP can access the TensorFlow model
+# Use DeepExplainer instead of GradientExplainer
+explainer = shap.GradientExplainer(model, X_train)  
+
+# Reshape X_test for SHAP (convert 3D -> 2D)
+X_test_reshaped = X_test[:, 0, :]  # Remove the time step dimension
+
+# Compute SHAP values
+shap_values = explainer.shap_values(X_test) 
+
+# Ensure correct shape before plotting
+shap_values = np.array(shap_values)[0]  # Extract the first (and only) class in binary classification
+
+# Summary plot of feature importance
+shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features)
+
+# Dependence plots for individual features
+for feature in range(len(numeric_features)):
+    shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features)
+
+
