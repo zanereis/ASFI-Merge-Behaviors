@@ -182,7 +182,7 @@ y_test = y_test.astype("int32")
 # Train the model with early stopping and class weights
 model.fit(
     X_train, y_train, 
-    epochs=50, 
+    epochs=30, 
     batch_size=16, 
     validation_data=(X_val, y_val), 
     callbacks=[early_stopping],  # Add early stopping callback
@@ -219,22 +219,22 @@ print("\nConfusion Matrix:\n", conf_matrix)
 # Using SHAP to interpret the prediction of the model
 # Ensure SHAP can access the TensorFlow model
 # Use DeepExplainer instead of GradientExplainer
-explainer = shap.GradientExplainer(model, X_train)  
+# explainer = shap.GradientExplainer(model, X_train)  
 
-# Reshape X_test for SHAP (convert 3D -> 2D)
-X_test_reshaped = X_test[:, 0, :]  # Remove the time step dimension
+# # Reshape X_test for SHAP (convert 3D -> 2D)
+# X_test_reshaped = X_test[:, 0, :]  # Remove the time step dimension
 
-# Compute SHAP values
-shap_values = explainer.shap_values(X_test) 
+# # Compute SHAP values
+# shap_values = explainer.shap_values(X_test) 
 
-# Ensure correct shape before plotting
-shap_values = np.array(shap_values)[0]  # Extract the first (and only) class in binary classification
+# # Ensure correct shape before plotting
+# shap_values = np.array(shap_values)[0]  # Extract the first (and only) class in binary classification
 
-# Summary plot of feature importance
-shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features)
+# # Summary plot of feature importance
+# shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features)
 
-# Dependence plots for individual features
-for feature in range(len(numeric_features)):
-    shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features)
+# # Dependence plots for individual features
+# for feature in range(len(numeric_features)):
+#     shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features)
 
 
