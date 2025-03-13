@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 # Load JSON data
-file_path = "data/monthly_data/monthly_data.json"  # Update the path if necessary
+file_path = "../data/monthly_data/monthly_data.json"  # Update the path if necessary
 with open(file_path, "r") as file:
     data = json.load(file)
 

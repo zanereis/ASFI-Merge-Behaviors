@@ -6,3 +6,4 @@ gitssh
 gitssh.pub
 release/*.csv
 release/*.json
+model/myenv/*
