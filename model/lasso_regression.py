@@ -88,3 +88,7 @@ print(f"Feature importance plot saved at: {plot_path}")
 # Print feature importance values
 print("Feature Importance (Lasso Coefficients):")
 print(feature_importance)
+
+# Large positive coefficient → Feature strongly increases graduation probability.
+# Large negative coefficient → Feature strongly decreases graduation probability.
+# Coefficient near zero → Feature is either unimportant or eliminated by Lasso.

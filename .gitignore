@@ -1,3 +1,5 @@
+.DS_Store
+.ipynb_checkpoints
 core_developers/ASFI_CSV.zip
 core_developers/csvs/
 core_developers/comments.csv
