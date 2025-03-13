@@ -151,6 +151,8 @@ model = Sequential([
     Input(shape=(1, len(numeric_features))),  # Explicit input layer
     LSTM(64, return_sequences=True),
     Dropout(0.2),
+    LSTM(64, return_sequences=True),
+    Dropout(0.2),
     LSTM(64),
     Dropout(0.2),
     Dense(25, activation="relu"),
@@ -166,7 +168,7 @@ model.compile(optimizer=optimizer, loss="binary_crossentropy", metrics=["accurac
 # Define early stopping
 early_stopping = EarlyStopping(
     monitor='val_loss',  # Metric to monitor
-    patience=3,          # Number of epochs to wait for improvement
+    patience=5,          # Number of epochs to wait for improvement
     restore_best_weights=True  # Restore the best weights after stopping
 )
 
