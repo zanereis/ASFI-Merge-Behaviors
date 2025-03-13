@@ -4,7 +4,7 @@ import numpy as np
 from scipy.stats import chi2_contingency
 
 # Load JSON data
-file_path = "data/monthly_data/monthly_data.json"  # Adjust path if needed
+file_path = "../data/monthly_data/monthly_data.json"  # Adjust path if needed
 with open(file_path, "r") as file:
     data = json.load(file)
 

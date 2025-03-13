@@ -1,3 +1,4 @@
+import os
 import json
 import pandas as pd
 import numpy as np
@@ -5,6 +6,10 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LassoCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
+
+# Create 'plots' directory if it doesn't exist
+plots_dir = "plots"
+os.makedirs(plots_dir, exist_ok=True)
 
 # Load JSON data
 file_path = "../data/monthly_data/monthly_data.json"  # Update the path if necessary
@@ -72,13 +77,14 @@ plt.title("Feature Importance using Lasso Regression (Including Zero Coefficient
 plt.xlabel("Feature")
 plt.ylabel("Coefficient Value")
 plt.xticks(rotation=20, ha="right")
-plt.show()
+
+# Save the plot
+plot_path = os.path.join(plots_dir, "lasso_feature_importance.png")
+plt.savefig(plot_path, bbox_inches='tight')
+plt.close()
+
+print(f"Feature importance plot saved at: {plot_path}")
 
 # Print feature importance values
 print("Feature Importance (Lasso Coefficients):")
 print(feature_importance)
-
-# Large positive coefficient → Feature strongly increases graduation probability.
-# Large negative coefficient → Feature strongly decreases graduation probability.
-# Coefficient near zero → Feature is either unimportant or eliminated by Lasso.
-
