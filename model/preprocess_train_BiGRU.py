@@ -62,8 +62,21 @@ for _, group in grouped_data:
         X.append(group.iloc[i][numeric_features].values)
         y.append(group.iloc[i]["status"])
 
-X = np.array(X).reshape(-1, 1, len(numeric_features))
+#X = np.array(X).reshape(-1, 1, len(numeric_features))
+#y = np.array(y)
+
+sequence_length = 3  # Use past 3 months for prediction
+X, y = [], []
+
+for _, group in grouped_data:
+    group_values = group[numeric_features].values
+    for i in range(len(group_values) - sequence_length):
+        X.append(group_values[i : i + sequence_length])
+        y.append(group.iloc[i + sequence_length]["status"])
+
+X = np.array(X)
 y = np.array(y)
+
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=42)
@@ -75,7 +88,7 @@ class_weight_dict = {0: class_weights[0], 1: class_weights[1]}
 
 # Define the Bi-GRU model
 model = Sequential([
-    Input(shape=(1, len(numeric_features))),
+    Input(shape=(sequence_length, len(numeric_features))),
     Bidirectional(GRU(64, return_sequences=True)),
     Dropout(0.2),
     Bidirectional(GRU(64, return_sequences=True)),
@@ -87,7 +100,7 @@ model = Sequential([
 ])
 
 # Compile the model
-optimizer = Adam(learning_rate=0.000005)
+optimizer = Adam(learning_rate=0.0005)
 model.compile(optimizer=optimizer, loss="binary_crossentropy", metrics=["accuracy"])
 
 # Early stopping
@@ -106,3 +119,30 @@ model.fit(
 # Evaluate the model
 loss, accuracy = model.evaluate(X_test, y_test)
 print(f"Test Accuracy: {accuracy:.4f}")
+
+# Make predictions
+y_pred_prob = model.predict(X_test)
+y_pred = (y_pred_prob.astype("float32") > 0.5).astype(int)  # Convert probabilities to binary (0 or 1)
+
+# Compute overall accuracy
+overall_accuracy = accuracy_score(y_test, y_pred)
+print(f"Overall Accuracy: {overall_accuracy:.4f}")
+
+# Compute precision, recall, F1-score, and support for each class
+report = classification_report(y_test, y_pred, target_names=["Retired", "Graduated"])
+print("\nClassification Report:\n", report)
+
+# Compute confusion matrix
+conf_matrix = confusion_matrix(y_test, y_pred)
+print("\nConfusion Matrix:\n", conf_matrix)
+
+# Extract class-wise metrics
+import numpy as np
+report_dict = classification_report(y_test, y_pred, target_names=["Retired", "Graduated"], output_dict=True)
+
+# Print class-wise accuracy
+retired_accuracy = report_dict["Retired"]["precision"]
+graduated_accuracy = report_dict["Graduated"]["precision"]
+
+print(f"\nAccuracy for Retired Projects: {retired_accuracy:.4f}")
+print(f"Accuracy for Graduated Projects: {graduated_accuracy:.4f}")
