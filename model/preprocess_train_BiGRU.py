@@ -65,7 +65,7 @@ for _, group in grouped_data:
 #X = np.array(X).reshape(-1, 1, len(numeric_features))
 #y = np.array(y)
 
-sequence_length = 3  # Use past 3 months for prediction
+sequence_length = 1  # Use past 3 months for prediction
 X, y = [], []
 
 for _, group in grouped_data:
@@ -149,3 +149,52 @@ graduated_accuracy = report_dict["Graduated"]["precision"]
 
 print(f"\nAccuracy for Retired Projects: {retired_accuracy:.4f}")
 print(f"Accuracy for Graduated Projects: {graduated_accuracy:.4f}")
+
+# *********************************************
+# Using SHAP to interpret the prediction of the model
+# Ensure SHAP can access the TensorFlow model
+rng = np.random.default_rng()
+
+# Create 'plots' directory if it doesn't exist
+plots_dir = "plots/BiGRU_SHAP"
+os.makedirs(plots_dir, exist_ok=True)
+
+# Sample background data
+background = X_train[rng.choice(X_train.shape[0], 50, replace=False)]
+
+# Ensure X_test has the correct shape
+if len(X_test.shape) == 3:
+    X_test_reshaped = X_test[:100].reshape(100, X_test.shape[2])  # Remove timestep dim
+else:
+    X_test_reshaped = X_test[:100]
+
+# Initialize SHAP explainer
+explainer = shap.GradientExplainer(model, background)
+
+# Compute SHAP values
+shap_values = explainer.shap_values(X_test[:100])
+
+# Convert to numpy array if necessary
+if isinstance(shap_values, list):
+    shap_values = shap_values[0]  # Extract first class for binary classification
+
+shap_values = np.squeeze(shap_values)  # Removes dimensions of size 1
+
+# Ensure correct shape
+print("SHAP values shape after squeeze:", shap_values.shape)
+print("X_test shape:", X_test[:100].shape)
+
+# Save summary plot
+plt.figure()
+shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features, show=False)
+plt.savefig(os.path.join(plots_dir, "shap_summary_plot.png"), bbox_inches='tight')
+plt.close()
+
+# Save dependence plots
+for feature in range(len(numeric_features)):
+    plt.figure()
+    shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features, show=False)
+    plt.savefig(os.path.join(plots_dir, f"shap_dependence_plot_{numeric_features[feature]}.png"), bbox_inches='tight')
+    plt.close()
+
+print(f"SHAP plots saved in '{plots_dir}' folder successfully!")

@@ -104,6 +104,8 @@ for _, group in grouped_data:
 X = np.array(X).reshape(-1, 1, len(numeric_features))  # Reshape for LSTM (samples, time step = 1, features)
 y = np.array(y)
 
+
+
 graduated_sequences = np.sum(y == 1)
 retired_sequences = np.sum(y == 0)
 
@@ -161,7 +163,7 @@ model = Sequential([
 ])
 
 # Define an optimizer with a specific learning rate
-optimizer = Adam(learning_rate=0.000005)  # Default is 0.001
+optimizer = Adam(learning_rate=0.0005)  # Default is 0.001
 
 # Compile the model
 model.compile(optimizer=optimizer, loss="binary_crossentropy", metrics=["accuracy"])
@@ -224,7 +226,7 @@ print("\nConfusion Matrix:\n", conf_matrix)
 rng = np.random.default_rng()
 
 # Create 'plots' directory if it doesn't exist
-plots_dir = "plots"
+plots_dir = "plots/LSTM_SHAP"
 os.makedirs(plots_dir, exist_ok=True)
 
 # Sample background data
