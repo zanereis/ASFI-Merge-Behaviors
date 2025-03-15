@@ -1,6 +1,7 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
 
 def load_data(csv_filename):
     df = pd.read_csv(csv_filename)
@@ -9,7 +10,10 @@ def load_data(csv_filename):
     return df
 
 def plot_and_save(fig, filename):
-    fig.savefig(filename, bbox_inches='tight')
+    output_dir = "Normal Plots"
+    os.makedirs(output_dir, exist_ok=True)  # Ensure the directory exists
+    filepath = os.path.join(output_dir, filename)
+    fig.savefig(filepath, bbox_inches='tight')
     plt.close(fig)
 
 def plot_boxplots(df):
@@ -55,6 +59,24 @@ def plot_pairplot(df):
     pairplot.savefig("pairplot.png", bbox_inches='tight')
     plt.close()
 
+def plot_accepted_pr_violin_plot(df):
+    fig, ax = plt.subplots(figsize=(8, 6))
+    sns.violinplot(x="Project State", y="Merged PRs", data=df, ax=ax)
+    ax.set_title("Accepted PRs Distribution by Project State")
+    ax.set_xlabel("Project State (1=Graduated, 2=Retired)")
+    ax.set_ylabel("Merged PRs")
+    plot_and_save(fig, "accepted_prs_violinplot.png")
+
+def plot_accepted_prs_boxplot(df):
+    fig, ax = plt.subplots(figsize=(8, 6))
+    sns.boxplot(x="Project State", y="Merged PRs", data=df, ax=ax)
+    ax.set_title("Distribution of Accepted PRs by Project State")
+    ax.set_xlabel("Project State (1=Graduated, 2=Retired)")
+    ax.set_ylabel("Number of Accepted PRs")
+    plot_and_save(fig, "accepted_prs_boxplot.png")
+
+
+
 def print_summary_stats(df):
     for state, label in zip([1, 2], ["Graduated", "Retired"]):
         subset = df[df["Project State"] == state]
@@ -97,6 +119,8 @@ def main():
     plot_scatter(df)
     plot_pairplot(df)
     print_summary_stats(df)
+    plot_accepted_pr_violin_plot(df)
+    plot_accepted_prs_boxplot(df)
 
 if __name__ == "__main__":
     main()

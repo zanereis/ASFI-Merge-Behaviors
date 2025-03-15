@@ -86,6 +86,9 @@ X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.
 class_weights = compute_class_weight(class_weight="balanced", classes=np.unique(y_train), y=y_train.ravel())
 class_weight_dict = {0: class_weights[0], 1: class_weights[1]}
 
+# Print computed class weights
+print(f"Computed Class Weights: {class_weight_dict}")
+
 # Define the Bi-GRU model
 model = Sequential([
     Input(shape=(sequence_length, len(numeric_features))),
