@@ -92,8 +92,8 @@ repo_pr_stats = compute_pr_stats(pr_json_data, repo_latencies)
 #     print(f"Repo: {pr_repo} PR #{pr_num}: {latency:.2f} hours")
 # print("\n")
 
-print(f"Average PR Resolution Latency for Graduated Projects: {graduated_avg_latency:.2f} hours")
-print(f"Average PR Resolution Latency for Retired Projects: {retired_avg_latency:.2f} hours\n")
+print(f"Average PR Merged Latency for Graduated Projects: {graduated_avg_latency:.2f} hours")
+print(f"Average PR Merged Latency for Retired Projects: {retired_avg_latency:.2f} hours\n")
 
 # Function to generate CSV file
 with open("pr_merge_time.csv", mode="w", newline="", encoding="utf-8") as file:
@@ -132,5 +132,5 @@ def compute_median(latencies):
 graduated_median_latency = compute_median([lat[2] for lat in graduated_latencies])
 retired_median_latency = compute_median([lat[2] for lat in retired_latencies])
 
-print(f"Median PR Resolution Latency for Graduated Projects: {graduated_median_latency:.2f} hours")
-print(f"Median PR Resolution Latency for Retired Projects: {retired_median_latency:.2f} hours\n")
+print(f"Median PR Merged Latency for Graduated Projects: {graduated_median_latency:.2f} hours")
+print(f"Median PR Merged Latency for Retired Projects: {retired_median_latency:.2f} hours\n")

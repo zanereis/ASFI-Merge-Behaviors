@@ -45,6 +45,37 @@ for repo, diffs in repo_time_diffs.items():
     status = repo_status.get(repo, "Unknown")
     repo_stats[repo] = {"status": status, "mean_hours": mean_diff, "median_hours": median_diff, "90th_percentile_hours": percentile_90}
 
+# Collect mean and median times for graduated and retired projects
+graduated_means = []
+graduated_medians = []
+retired_means = []
+retired_medians = []
+
+for repo, stats in repo_stats.items():
+    if stats["status"] == "graduated":
+        graduated_means.append(stats["mean_hours"])
+        graduated_medians.append(stats["median_hours"])
+    elif stats["status"] == "retired":
+        retired_means.append(stats["mean_hours"])
+        retired_medians.append(stats["median_hours"])
+
+# Compute mean and median across all mean and median values
+if graduated_means and graduated_medians:
+    graduated_overall_mean = round(np.mean(graduated_means), 2)
+    graduated_overall_median = round(np.median(graduated_medians), 2)
+    print(f"Graduated Projects - Overall Mean of Mean Time Between Comments: {graduated_overall_mean} hours")
+    print(f"Graduated Projects - Overall Median of Median Time Between Comments: {graduated_overall_median} hours")
+else:
+    print("No graduated projects with sufficient data available.")
+
+if retired_means and retired_medians:
+    retired_overall_mean = round(np.mean(retired_means), 2)
+    retired_overall_median = round(np.median(retired_medians), 2)
+    print(f"Retired Projects - Overall Mean of Mean Time Between Comments: {retired_overall_mean} hours")
+    print(f"Retired Projects - Overall Median of Median Time Between Comments: {retired_overall_median} hours")
+else:
+    print("No retired projects with sufficient data available.")
+
 # Print results for each repo
 for repo, stats in repo_stats.items():
     print(f"Repo: {repo}")
