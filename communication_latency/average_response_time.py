@@ -2,6 +2,7 @@ import json
 import csv
 from datetime import datetime
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Load the JSON data
 with open("comments.json", "r") as f:
@@ -84,6 +85,21 @@ for repo, stats in repo_stats.items():
     print(f"  Median Time Between Comments: {stats['median_hours']} hours")
     print(f"  90th Percentile Time Between Comments: {stats['90th_percentile_hours']} hours")
     print("-")
+
+# Separate mean response times for graduated and retired projects
+graduated_means = [stats["mean_hours"] for repo, stats in repo_stats.items() if stats["status"] == "graduated"]
+retired_means = [stats["mean_hours"] for repo, stats in repo_stats.items() if stats["status"] == "retired"]
+
+# Create box plot
+plt.figure(figsize=(8, 6))
+plt.boxplot([graduated_means, retired_means], labels=["Graduated", "Retired"])
+
+# Set labels and title
+plt.ylabel("Average Response Time (hours)")
+plt.title("Comparison of Average Response Time Between Graduated and Retired Projects")
+
+# Show the plot
+plt.show()
 
 # Save results to CSV
 csv_filename = "average_comment_time.csv"
