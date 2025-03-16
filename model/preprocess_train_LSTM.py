@@ -212,6 +212,18 @@ print(f"Overall Accuracy: {overall_accuracy:.4f}")
 report = classification_report(y_test, y_pred, target_names=["Retired", "Graduated"], output_dict=True)
 print("\nClassification Report:\n", classification_report(y_test, y_pred, target_names=["Retired", "Graduated"]))
 
+# Extract overall precision, recall, and F1-score
+overall_precision = report["weighted avg"]["precision"]
+overall_recall = report["weighted avg"]["recall"]
+overall_f1 = report["weighted avg"]["f1-score"]
+
+# Print all metrics
+print("\nOverall Model Performance:")
+print(f"Accuracy:  {overall_accuracy:.4f}")
+print(f"Precision: {overall_precision:.4f}")
+print(f"Recall:    {overall_recall:.4f}")
+print(f"F1-Score:  {overall_f1:.4f}")
+
 # Compute confusion matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("\nConfusion Matrix:\n", conf_matrix)
