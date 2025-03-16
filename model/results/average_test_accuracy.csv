@@ -1,0 +1,5 @@
+Model,Average Test Accuracy
+BI-GRU,0.8997
+BI-LSTM,0.8804
+LSTM,0.8366
+GRU,0.8855

@@ -13,7 +13,6 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.utils.class_weight import compute_class_weight
-import os
 
 # Remove outliers using IQR before normalization
 def remove_outliers(df, features):
@@ -25,7 +24,7 @@ def remove_outliers(df, features):
     return df
 
 # Load JSON data
-file_path = "../data/monthly_data/monthly_data.json"  # Change to the correct path
+file_path = "data/monthly_data/monthly_data.json"  # Change to the correct path
 with open(file_path, "r") as file:
     data = json.load(file)
 
@@ -104,8 +103,6 @@ for _, group in grouped_data:
 X = np.array(X).reshape(-1, 1, len(numeric_features))  # Reshape for LSTM (samples, time step = 1, features)
 y = np.array(y)
 
-
-
 graduated_sequences = np.sum(y == 1)
 retired_sequences = np.sum(y == 0)
 
@@ -163,7 +160,7 @@ model = Sequential([
 ])
 
 # Define an optimizer with a specific learning rate
-optimizer = Adam(learning_rate=0.0005)  # Default is 0.001
+optimizer = Adam(learning_rate=0.000005)  # Default is 0.001
 
 # Compile the model
 model.compile(optimizer=optimizer, loss="binary_crossentropy", metrics=["accuracy"])
@@ -223,51 +220,23 @@ print("\nConfusion Matrix:\n", conf_matrix)
 # *********************************************
 # Using SHAP to interpret the prediction of the model
 # Ensure SHAP can access the TensorFlow model
-rng = np.random.default_rng()
+# Use DeepExplainer instead of GradientExplainer
+# explainer = shap.GradientExplainer(model, X_train)  
 
-# Create 'plots' directory if it doesn't exist
-plots_dir = "plots/LSTM_SHAP"
-os.makedirs(plots_dir, exist_ok=True)
+# # Reshape X_test for SHAP (convert 3D -> 2D)
+# X_test_reshaped = X_test[:, 0, :]  # Remove the time step dimension
 
-# Sample background data
-background = X_train[rng.choice(X_train.shape[0], 50, replace=False)]
+# # Compute SHAP values
+# shap_values = explainer.shap_values(X_test) 
 
-# Ensure X_test has the correct shape
-if len(X_test.shape) == 3:
-    X_test_reshaped = X_test[:100].reshape(100, X_test.shape[2])  # Remove timestep dim
-else:
-    X_test_reshaped = X_test[:100]
+# # Ensure correct shape before plotting
+# shap_values = np.array(shap_values)[0]  # Extract the first (and only) class in binary classification
 
-# Initialize SHAP explainer
-explainer = shap.GradientExplainer(model, background)
+# # Summary plot of feature importance
+# shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features)
 
-# Compute SHAP values
-shap_values = explainer.shap_values(X_test[:100])
-
-# Convert to numpy array if necessary
-if isinstance(shap_values, list):
-    shap_values = shap_values[0]  # Extract first class for binary classification
-
-shap_values = np.squeeze(shap_values)  # Removes dimensions of size 1
-
-# Ensure correct shape
-print("SHAP values shape after squeeze:", shap_values.shape)
-print("X_test shape:", X_test[:100].shape)
-
-# Save summary plot
-plt.figure()
-shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features, show=False)
-plt.savefig(os.path.join(plots_dir, "shap_summary_plot.png"), bbox_inches='tight')
-plt.close()
-
-# Save dependence plots
-for feature in range(len(numeric_features)):
-    plt.figure()
-    shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features, show=False)
-    plt.savefig(os.path.join(plots_dir, f"shap_dependence_plot_{numeric_features[feature]}.png"), bbox_inches='tight')
-    plt.close()
-
-print(f"SHAP plots saved in '{plots_dir}' folder successfully!")
-
+# # Dependence plots for individual features
+# for feature in range(len(numeric_features)):
+#     shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features)
 
 

@@ -15,7 +15,7 @@ from sklearn.utils.class_weight import compute_class_weight
 import os
 
 # Load JSON data
-file_path = "../data/monthly_data/monthly_data.json"
+file_path = "data/monthly_data/monthly_data.json"
 with open(file_path, "r") as file:
     data = json.load(file)
 
