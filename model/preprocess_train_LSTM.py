@@ -24,7 +24,7 @@ def remove_outliers(df, features):
     return df
 
 # Load JSON data
-file_path = "data/monthly_data/monthly_data.json"  # Change to the correct path
+file_path = "../data/monthly_data/monthly_data.json"  # Change to the correct path
 with open(file_path, "r") as file:
     data = json.load(file)
 
@@ -208,13 +208,22 @@ y_pred = (y_pred_prob.astype("float32") > 0.5).astype(int)  # Convert probabilit
 overall_accuracy = accuracy_score(y_test, y_pred)
 print(f"Overall Accuracy: {overall_accuracy:.4f}")
 
-# Compute accuracy, precision, recall, and F1-score for each class
-report = classification_report(y_test, y_pred, target_names=["Retired", "Graduated"])
-print("\nClassification Report:\n", report)
+# Compute classification report (precision, recall, F1-score, and support)
+report = classification_report(y_test, y_pred, target_names=["Retired", "Graduated"], output_dict=True)
+print("\nClassification Report:\n", classification_report(y_test, y_pred, target_names=["Retired", "Graduated"]))
 
 # Compute confusion matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("\nConfusion Matrix:\n", conf_matrix)
+
+# Extract per-class accuracy
+retired_accuracy = conf_matrix[0, 0] / conf_matrix[0].sum()  # TP / (TP + FN) for "Retired"
+graduated_accuracy = conf_matrix[1, 1] / conf_matrix[1].sum()  # TP / (TP + FN) for "Graduated"
+
+# Print class-wise accuracy
+print(f"\nClass-wise Accuracy:")
+print(f"Retired Projects Accuracy: {retired_accuracy:.4f}")
+print(f"Graduated Projects Accuracy: {graduated_accuracy:.4f}")
 
 
 # *********************************************
