@@ -30,7 +30,7 @@ numeric_features = [
     "avg_response_time", "avg_first_response_time", "active_devs",
     "accepted_prs", "avg_time_to_acceptance", "rejected_prs",
     "avg_time_to_rejection", "unresolved_prs", "avg_thread_length",
-    "new_prs", "new_comments", "total_active_devs"
+    "new_prs", "new_comments"
 ]
 
 # Normalize by total active devs to avoid division by zero

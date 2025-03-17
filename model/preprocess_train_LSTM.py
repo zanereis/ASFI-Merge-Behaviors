@@ -13,6 +13,7 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.utils.class_weight import compute_class_weight
+import os
 
 # Remove outliers using IQR before normalization
 def remove_outliers(df, features):
@@ -242,22 +243,72 @@ print(f"Graduated Projects Accuracy: {graduated_accuracy:.4f}")
 # Using SHAP to interpret the prediction of the model
 # Ensure SHAP can access the TensorFlow model
 # Use DeepExplainer instead of GradientExplainer
-# explainer = shap.GradientExplainer(model, X_train)  
+#explainer = shap.GradientExplainer(model, X_train)  
 
 # # Reshape X_test for SHAP (convert 3D -> 2D)
-# X_test_reshaped = X_test[:, 0, :]  # Remove the time step dimension
+#X_test_reshaped = X_test[:, 0, :]  # Remove the time step dimension
 
 # # Compute SHAP values
-# shap_values = explainer.shap_values(X_test) 
+#shap_values = explainer.shap_values(X_test) 
 
 # # Ensure correct shape before plotting
-# shap_values = np.array(shap_values)[0]  # Extract the first (and only) class in binary classification
+#shap_values = np.array(shap_values)[0]  # Extract the first (and only) class in binary classification
 
 # # Summary plot of feature importance
-# shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features)
+#shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features)
 
 # # Dependence plots for individual features
-# for feature in range(len(numeric_features)):
-#     shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features)
+#for feature in range(len(numeric_features)):
+#    shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features)
+
+
+# *********************************************
+# Using SHAP to interpret the prediction of the model
+# Ensure SHAP can access the TensorFlow model
+rng = np.random.default_rng()
+
+# Create 'plots' directory if it doesn't exist
+plots_dir = "plots/LSTM_SHAP"
+os.makedirs(plots_dir, exist_ok=True)
+
+# Sample background data
+background = X_train[rng.choice(X_train.shape[0], 50, replace=False)]
+
+# Ensure X_test has the correct shape
+if len(X_test.shape) == 3:
+    X_test_reshaped = X_test[:100].reshape(100, X_test.shape[2])  # Remove timestep dim
+else:
+    X_test_reshaped = X_test[:100]
+
+# Initialize SHAP explainer
+explainer = shap.GradientExplainer(model, background)
+
+# Compute SHAP values
+shap_values = explainer.shap_values(X_test[:100])
+
+# Convert to numpy array if necessary
+if isinstance(shap_values, list):
+    shap_values = shap_values[0]  # Extract first class for binary classification
+
+shap_values = np.squeeze(shap_values)  # Removes dimensions of size 1
+
+# Ensure correct shape
+print("SHAP values shape after squeeze:", shap_values.shape)
+print("X_test shape:", X_test[:100].shape)
+
+# Save summary plot
+plt.figure()
+shap.summary_plot(shap_values, X_test_reshaped, feature_names=numeric_features, show=False)
+plt.savefig(os.path.join(plots_dir, "shap_summary_plot.png"), bbox_inches='tight')
+plt.close()
+
+# Save dependence plots
+for feature in range(len(numeric_features)):
+    plt.figure()
+    shap.dependence_plot(feature, shap_values, X_test_reshaped, feature_names=numeric_features, show=False)
+    plt.savefig(os.path.join(plots_dir, f"shap_dependence_plot_{numeric_features[feature]}.png"), bbox_inches='tight')
+    plt.close()
+
+print(f"SHAP plots saved in '{plots_dir}' folder successfully!")
 
 
