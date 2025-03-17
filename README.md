@@ -22,27 +22,27 @@ pip install -r requirements.txt
 
 ### Note: Make sure you have the ASFI dataset and the data from issues of this repository downloaded and saved in your desired directory
 
-## Analysis PR related metrics with pull request data, we need to work on the pr_data_analysis directory
-## we will need pull_requests.json, project-status.json from https://github.com/zanereis/ASFI-Merge-Behaviors/releases/tag/0.0.1
-## we will need monthly_data.json from https://github.com/zanereis/ASFI-Merge-Behaviors/tree/main/data/monthly_data
-## Also we will need this project list csv from ASFI https://github.com/zanereis/ASFI-Merge-Behaviors/blob/main/data/asfi-sustainability-dataset/lists_2019_8.csv
+### Analysis PR related metrics with pull request data, we need to work on the pr_data_analysis directory
+### we will need pull_requests.json, project-status.json from https://github.com/zanereis/ASFI-Merge-Behaviors/releases/tag/0.0.1
+### we will need monthly_data.json from https://github.com/zanereis/ASFI-Merge-Behaviors/tree/main/data/monthly_data
+### Also we will need this project list csv from ASFI https://github.com/zanereis/ASFI-Merge-Behaviors/blob/main/data/asfi-sustainability-dataset/lists_2019_8.csv
 
-## Generating initial summary
+### Generating initial summary
 ```
 python3 data_reader.py
 ```
 
-## Generating initial plots
+### Generating initial plots
 ```
 python3 graph_grenerate.py
 ```
 
-## Generating normalized summary
+### Generating normalized summary
 ```
 python3 normalizer.py
 ```
 
-## Generating normalized summary
+### Generating normalized summary
 ```
 python3 normalized_graph_generate.py
 ```
@@ -51,7 +51,7 @@ python3 normalized_graph_generate.py
 ### Put all the files from https://github.com/zanereis/ASFI-Merge-Behaviors/releases/tag/0.0.1 in this directory
 ### After that run all the python files in the directory to generate graphs 
 
-## Analysing the core developers with pull requests
+### Analysing the core developers with pull requests
 All analyses regarding the core developers can be found in the "core_developers" folder.  
 
 ### Analysing the datasets (both the ASFI dataset and the ones made by us) 
@@ -72,4 +72,4 @@ jupyter nbconvert --to notebook --execute core_developers/3.eda.ipynb
 ```
 
 ### For lasso regression,p_values,ML model and SHAP analysis go to model directory
-## We just have to run the respective ml model preprocess_train_'model_name' files
+### We just have to run the respective ml model preprocess_train_'model_name' files
