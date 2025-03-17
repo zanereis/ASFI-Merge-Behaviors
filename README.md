@@ -71,5 +71,5 @@ jupyter nbconvert --to notebook --execute core_developers/2.preprocessing.ipynb
 jupyter nbconvert --to notebook --execute core_developers/3.eda.ipynb
 ```
 
-### For lasso regression,p_values,ML model and SHAP analysis go to model directory
+### For lasso regression,p_values,ML model and SHAP analysis go to model directory. Have to make sure the monthly_data.json is in the right directory.
 ### We just have to run the respective ml model preprocess_train_'model_name' files
