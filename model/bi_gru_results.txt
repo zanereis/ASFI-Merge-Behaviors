@@ -1,0 +1,12 @@
+Model Evaluation Results (Averaged over 5 Runs)
+==================================================
+Accuracy: 0.8967
+Precision (Graduated): 0.9720
+Precision (Retired): 0.1620
+Recall (Graduated): 0.9160
+Recall (Retired): 0.3880
+F1-Score (Graduated): 0.9440
+F1-Score (Retired): 0.2280
+Overall Precision: 0.9423
+Overall Recall: 0.8967
+Overall F1-Score: 0.9166
